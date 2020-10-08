@@ -1,0 +1,1839 @@
+
+/* Table Of Content
+==============================*/
+
+/*
+1.	Base styles 
+	    1.1  Preloader css 
+	    1.2  CSS3 ANIMATIONS  PRELOADER CIRCLE
+
+2.	Home  Section
+		2.1	 Home Slider Section
+		2.2  DD-menu Section
+	
+3.	About Section
+4.	Parallax Image With Video
+5.	Tab Menu Section
+		5.1  Menu Type One
+		5.2  Menu Type Two
+		5.3  Menu Type Three
+		5.4  Menu Type Four
+		5.5  Menu Type Five
+		
+6.	Reservation
+7.	Gallery
+8.	chef
+9.	Contact Us
+10.	Footer And Map
+		10.1 Map
+		10.2 Footer
+		
+11.	Media Query
+		
+
+
+/* // Table Of Content
+==============================*/
+
+
+/* 1. BASE STYLES 
+==============================*/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	overflow-x:hidden;
+}
+
+a:hover, 
+a:focus, 
+a:active { 
+	outline: none; 
+	-moz-outline-style: none; 
+}
+
+/* 1.1 Preloader 
+============================== */
+
+#jpreOverlay{
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index:999999;
+}
+
+#jSplash {
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index:999997;
+}
+
+#jpreSlide{
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+	margin: -50px 0 0 -50px;
+	width: 100px;
+	height: 100px;
+}
+#jpreLoader {
+	position: relative !important;
+	width: 100% !important;
+	height: 100% !important;
+	top: 0 !important;	
+}
+#jprePercentage {
+	width: 50px;
+	height: 50px !important;
+	line-height: 50px;
+	position: absolute !important;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	margin: 25px 0 0 -20px;
+	z-index: 999998;
+	font-size: 16px;
+	color: #454545;	
+	font-weight:500;
+	-webkit-animation: fadeIn 1s infinite forwards;
+	   -moz-animation: fadeIn 1s infinite forwards;
+		-ms-animation: fadeIn 1s infinite forwards;
+		 -o-animation: fadeIn 1s infinite forwards;
+			animation: fadeIn 1s infinite forwards;
+}
+
+
+
+.cube {
+  background-color: #fc4225;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  -webkit-animation: cubemove 4s infinite ease-in-out;
+    -moz-animation: cubemove 4s infinite ease-in-out;
+	  -o-animation: cubemove 4s infinite ease-in-out;
+  animation: cubemove 4s infinite;
+}
+
+/* 1.1 Preloader 
+============================== */
+
+/* 1.2  CSS3 ANIMATIONS  PRELOADER CIRCLE 
+============================================================ */
+
+@-webkit-keyframes cubemove {
+  35% {
+    -webkit-transform: scale(0.005);
+  }
+
+  50% {
+    -webkit-transform: scale(1.7);
+  }
+
+  65% {
+    -webkit-transform: scale(0.005);
+  }
+}
+
+
+@-moz-keyframes cubemove {
+  35% {
+    -moz-transform: scale(0.005);
+  }
+
+  50% {
+    -moz-transform: scale(1.7);
+  }
+
+  65% {
+    -moz-transform: scale(0.005);
+  }
+}
+
+@-moz-keyframes cubemove {
+  35% {
+    -moz-transform: scale(0.005);
+  }
+
+  50% {
+    -moz-transform: scale(1.7);
+  }
+
+  65% {
+    -moz-transform: scale(0.005);
+  }
+}
+
+
+
+.cube1 {
+  left: 14px;
+  top: 0px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.1s;
+}
+
+.cube2 {
+  left: 28px;
+  top: 0px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.2s;
+}
+
+.cube3 {
+  left: 42px;
+  top: 0px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.3s;
+}
+
+.cube4 {
+  left: 0px;
+  top: 14px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.1s;
+}
+
+.cube5 {
+  left: 14px;
+  top: 14px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.2s;
+}
+
+.cube6 {
+  left: 28px;
+  top: 14px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.3s;
+}
+
+.cube7 {
+  left: 42px;
+  top: 14px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.4s;
+}
+
+.cube8 {
+  left: 0px;
+  top: 28px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.2s;
+}
+
+.cube9 {
+  left: 14px;
+  top: 28px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.3s;
+}
+
+.cube10 {
+  left: 28px;
+  top: 28px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.4s;
+}
+
+.cube11 {
+  left: 42px;
+  top: 28px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 0.5s;
+}
+
+.cube12 {
+  left: 0px;
+  top: 42px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.3s;
+}
+
+.cube13 {
+  left: 14px;
+  top: 42px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.4s;
+}
+
+.cube14 {
+  left: 28px;
+  top: 42px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 0.5s;
+}
+
+.cube15 {
+  left: 42px;
+  top: 42px;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 0.6s;
+}
+
+/*.cube1 {
+  top: -30px;
+  left: -30px;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: .5s;
+}*/
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -20px;
+}
+
+/* 1.2  CSS3 ANIMATIONS  PRELOADER CIRCLE 
+============================================================ */
+
+h1 {
+	font-size:40px;
+	color:#222222;
+	font-weight:300;
+	line-height:48px;
+	margin:0;
+}
+
+h4 {
+	font-size:28px;
+	color:#222222;
+	font-weight:300;
+}
+
+.tag{
+	font-size: 16px;
+	color: #212121;
+	letter-spacing: 1px;
+	font-weight: 300;
+	line-height: 26px;
+	margin-top: 0;
+}
+
+
+p {
+	font-size: 16px;
+	color: #212121;
+	letter-spacing: 1px;
+	font-weight: 300;
+	line-height: 24px;
+	margin-top:0;
+}
+
+.row {
+	margin-bottom:0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+
+/* Horizontal Line */
+
+hr {
+	border-color: rgba(255,255,255,.3);
+}
+
+.hr-line {
+	/*background: #E2E2E2;*/
+	height: 1px;
+	position: relative;
+	width: 28%;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-0%);
+	-webkit-transform: translateX(-50%) translateY(-0%);
+	-moz-transform: translateX(-50%) translateY(-0%);
+	-ms-transform: translateX(-50%) translateY(-0%);
+	margin:30px 0;
+}
+
+.hr-line i {
+	position: relative;
+	top: -25px;
+	background: #fff;
+	font-size:32px;
+	color: #fc4225;
+}
+
+.divider{
+    color:#ccc;
+    width:70%;
+    margin:20px auto;
+    overflow:hidden;
+    text-align:center;   
+    line-height:1.2em;
+}
+
+.hr-line:before, .hr-line:after{
+    content:"";
+    vertical-align:top;
+    display:inline-block;
+    width:50%;
+    /*height:0.65em;*/
+    border-bottom:1px solid #ccc;
+    margin:0 2% 0 -55%;
+}
+.hr-line:after{
+    margin:0 -55% 0 2%;
+}
+
+/* // Horizontal Line */
+
+/* Sections Bgcolors And Styles*/
+
+.whitebg {
+	background:#ffffff;
+	padding:80px 0;
+}
+
+.graybg {
+	background:#f5f5f5;
+	padding:80px 0;
+}
+
+.gallerybg, .spliderbg {
+	background:#32353a;
+	padding-top:80px;
+}
+
+.graybg .hr-line i {
+	background:#f5f5f5;
+}
+
+.gallerybg .hr-line i, 
+.spliderbg .hr-line i {
+	background:#32353a;
+}
+
+.colorbg {
+	background:#fc4225;
+	padding:80px 0;
+}
+
+.colorbg h1 {
+	color:#fff;
+	text-transform:capitalize;
+	padding-bottom:10px;
+}
+
+.colorbg p {
+	font-size: 20px;
+	line-height: 26px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.spliderbg {
+	padding: 50px 0 30px 0;
+}
+
+.spliderbg .tag {
+	color:#828282;
+}
+
+/* // Sections Bgcolors And Styles */
+
+/* Buttons And Styles */
+
+.btn, .btn-large {
+	background:#fc4225;
+	letter-spacing:1px;
+	font-size:14px;
+}
+
+.btn:hover, .btn-large:hover {
+	background:#F54125;
+}
+
+/* // Buttons And Styles */
+
+/* Margin And Padding Styles */
+
+.martop10 {
+	margin-top:10px;
+}
+
+.martop30 {
+	margin-top:30px;
+}
+
+.marbot15 {
+	margin-bottom:15px;
+}
+
+.marbot30 {
+	margin-bottom:30px;
+}
+
+.martop60 {
+	margin-top:60px;
+}
+
+.padding-12-per {
+	padding:0px 12%;
+}
+
+.padding-right-15per {
+	padding-right:15%;
+}
+
+.padding-right-20per {
+	padding-right:25%;
+}
+
+.pad-20-tb {
+	padding:20px 0;
+}
+
+.padding-25-per {
+	padding:0px 25%;
+}
+
+/* // Margin And Padding Styles */
+
+/* Images */
+
+.fullwidth {
+	width:100%;
+}
+
+/* // Images */
+
+/* Down Circle */
+
+.down-circle {
+	position: absolute;
+	bottom: -25px;
+	width: 100%;
+	top: auto;
+}
+
+.down-circle .btn-floating {
+	margin:0 auto;
+	display:block;
+}
+
+.down-circle .btn-floating i {
+	color:#222222;
+	font-weight: 700;
+}
+
+/* // Down Circle */
+
+/* 1. BASE STYLES 
+==============================*/
+
+
+/* 2. HOME  SECTION 
+==============================*/
+
+/* 2.1 HOME SLIDER SECTION 
+==============================*/
+
+.home-banner .hr-line {
+	position:absolute;
+	margin:0!important;
+	left: 65%;
+	top:70%;
+	transform: translateX(-65%) translateY(-70%);
+	-webkit-transform: translateX(-65%) translateY(-70%);
+	-moz-transform: translateX(-65%) translateY(-70%);
+	-ms-transform: translateX(-65%) translateY(-70%);
+}
+
+.home-banner .hr-line i {
+	top:0;
+	background: transparent;
+	vertical-align:middle;
+}
+
+.home-banner .hr-line:before,
+.home-banner .hr-line:after {
+	vertical-align:middle;
+}
+
+.home .colorbg {
+	padding: 50px 0 30px 0;
+}
+
+.home-scroll-content {
+	position: relative;
+	text-align: center;
+	color:#fc4225;
+	font-size:13px;
+	margin-bottom: 25px;
+}
+
+.home-banner {
+	position:relative;
+
+}
+
+/* // 2.1 HOME  SLIDER SECTION 
+==============================*/
+
+/* 2.2 DD-MENU  SECTION 
+==============================*/
+
+#sidenav-overlay {
+	background:none;
+	z-index:0;
+}
+
+.whitestrip {
+	position:fixed;
+	width:100%;
+	background:rgba(255,255,255,1);
+	z-index:2;
+	height:80px;
+	line-height:80px;
+}
+
+.dropdown-content {
+	background:rgba(255,255,255,1);
+	top:10px;
+	left: auto!important;
+	right: 5px;
+	z-index:9999;
+}
+
+nav a.button-collapse {
+	color:#fc4225;
+	border-bottom:none;
+}
+
+nav a.dropdown-button {
+	margin-right:20px;
+}
+
+nav a.dropdown-button i {
+	font-size:28px;
+	vertical-align: middle;
+}
+
+.dropdown-content li > a, 
+.dropdown-content li > span {
+	color:#737373;
+	font-size:14px;
+	text-transform:uppercase;
+}
+
+.social-icons a {
+	padding:0 10px;
+}
+
+
+
+nav .brand-logo {
+	padding-left:80px;
+}
+
+nav .brand-logo img {
+	margin:auto;
+	vertical-align:middle;
+}
+
+nav ul li a{
+	line-height:74px;
+	text-transform:uppercase;
+	font-size:14px;
+	color:#3a3a3a;
+	font-weight:500;
+}
+
+.dropdown-content li:hover, .dropdown-content li.active,
+nav ul li:hover, nav ul li.active {
+	background:transparent;
+}
+
+nav ul li a:hover, nav ul li a.active {
+	background-color: rgba(245, 245, 245, 0.1);
+	border-bottom:3px solid #fc4225;
+	line-height:74px;
+}
+
+nav .nav-wrapper i {
+	font-size:15px;
+}
+
+/* // 2.2 DD-MENU  SECTION 
+==============================*/
+
+/* // 2. HOME  SECTION 
+==============================*/
+
+
+
+/* 3. ABOUT  SECTION 
+==============================*/
+
+.material-placeholder {
+	line-height:0;
+}
+
+.collapsible {
+	box-shadow:none;
+	border:none;
+}
+
+.collapsible li {
+	position:relative;
+}
+
+.collapsible-body p {
+	padding:0 0 2rem 0;
+	
+}
+
+.collapsible li.active i:before {
+	content: "\e7b7";
+}
+
+.collapsible li.active .collapsible-header {
+	border-bottom:none;
+}
+
+.collapsible-header {
+	color:#fc4225;
+	font-size:20px;
+	font-weight: 300;
+	line-height:28px;
+	text-transform:capitalize;
+	height: auto;
+	line-height: 32px;
+	padding: 10px 0;
+	padding-right:20px;
+}
+
+.collapsible-header i {
+	line-height: 4rem;
+	float: right;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align:right;
+	margin-left:5px;
+}
+
+.materialboxed:hover {
+	cursor: url(../img/pointer.png),crosshair;
+}
+
+.materialboxed {
+	width:100%;
+}
+
+/* // 3. ABOUT  SECTION 
+==============================*/
+
+
+/* 4. PARALLAX IMAGE WITH VIDEO
+======================================================*/
+
+.parallax img {
+	display:block;
+}
+
+.parallax .banner-logo {
+	text-align:center;
+}
+
+.parallax .banner-logo h1 {
+	color:#fff;
+}
+
+.parallax .banner-logo i {
+	text-align:center;
+	font-size:70px;
+	color:#fc4225;
+}
+
+#video .parallax {
+	z-index:initial;
+}
+
+#video iframe {
+	width:100%;
+	height:100%;
+	position:fixed;
+	overflow:hidden;
+	border: 0;
+}
+
+#video .modal {
+	overflow:hidden;
+}
+
+.banner-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+}
+
+/* // 4. PARALLAX IMAGE WITH VIDEO
+======================================================*/
+
+
+/* 5. TAB MENU SETION
+======================================================*/
+
+/* 5.1 Menu Type One 
+====================================================== */
+
+.section {
+	padding-bottom:0;
+	padding-top:0;
+}
+
+.tabs.z-depth-1 {
+	box-shadow:none;
+}
+
+.tabs li.tab {
+	/*background:#f5f5f5;*/
+	line-height:36px;
+}
+
+.tabs li.tab a {
+	color:#fc4225;
+	font-size: 17px;
+	text-transform:capitalize;
+	
+}
+
+
+.tabs li.tab a:hover {
+	color: #fc4225;
+}
+
+.tabs .indicator {
+	background-color:#fc4225;
+	height:3px;
+}
+
+.item-images {
+	float:left;
+	margin-right:20px;
+}
+
+.menu-type-one .item-images img {
+	width:100px;
+	height:100px;
+}
+
+.menu-type-one .item-images-right {
+	float:right;
+	margin-left:20px;
+}
+
+.menu-type-one .item-images-right img {
+	width:100px;
+	height:100px;
+}
+
+.menu-type-one .left-content {
+	text-align:right;
+	padding-right:15px;
+}
+
+.menu-type-one .item-title span {
+	color: #fc4225;
+}
+
+
+.menu-type-one .type-one-title {
+	font-size:18px;
+	font-weight:500;
+	color:#222222;
+	position:relative;
+}
+
+.menu-type-one .item-title {
+	
+	font-size:18px;
+	font-weight:500;
+	color:#222222;
+	position:relative;
+}
+
+.menu-type-one .title-left {
+	text-align:right;	
+	font-size:18px;
+	font-weight:500;
+	color:#222222;
+}
+
+.title-left .price {
+	color: #fc4225;
+}
+
+.menu-type-one .label {
+	color:#f5f5f5;
+	background:#fc4225;
+	padding: 3px 5px;
+	border-radius:3px;
+	font-size:12px;
+	margin: 0 5px;
+} 
+
+
+.type-one-title {
+	float: left;
+	padding-right: 5px;
+	z-index: 1;
+	position: relative;
+}
+
+.menu-type-one p {
+	clear:right;
+}
+
+
+.dots-left {
+	position: absolute;
+	bottom: -20px;
+	left: 5px;
+	right: 25%;
+	margin: 0;
+	border: 0;
+	height: 3px;
+	display: block;
+	background-image: radial-gradient(circle closest-side, #b3b3b3 99%,rgba(0,0,0,0) 1%);
+	background-position: bottom;
+	background-size: 6px 3px;
+	background-repeat: repeat-x;
+}
+
+.dots {
+	position: absolute;
+	bottom: 6px;
+	left: 18%;
+	right: 10px;
+	margin: 0;
+	border: 0;
+	height: 3px;
+	display: block;
+	background-image: radial-gradient(circle closest-side, #b3b3b3 99%,rgba(0,0,0,0) 1%);
+	background-position: bottom;
+	background-size: 6px 3px;
+	background-repeat: repeat-x;
+}
+
+/* // 5.1 Menu Type One 
+====================================================== */
+
+/* 5.2 Menu Type Two 
+====================================================== */
+
+.menu-type-two {
+	text-align:center;
+}
+
+.menu-type-two .item-title {
+	font-size:18px;
+	font-weight:500;
+	color:#222222;
+	position:relative;
+}
+
+.menu-type-two .label {
+	color:#f5f5f5;
+	background:#fc4225;
+	padding: 3px 5px;
+	border-radius:3px;
+	font-size:12px;
+	margin-left:5px;
+	margin-right:10px;
+} 
+
+.menu-type-two .item-images {
+	float:none;
+	margin:0 auto;
+	margin-bottom:20px;
+}
+
+.menu-type-two p {
+	display:inline-block;
+	text-align:center;
+	width:320px;
+}
+
+.menu-type-two .price {
+	margin-left:5px;
+	color: #fc4225;
+}
+
+/* // 5.2 Menu Type Two 
+====================================================== */
+
+
+/* 5.3 Menu Type Three 
+====================================================== */
+
+.label-price{ 
+	height:60px;
+	width:60px;
+	border-radius:50%;
+	background:#fc4225;
+	color:#f5f5f5;
+	font-size:18px;
+	font-weight:500;
+	text-align:center;
+	line-height:60px!important;
+	margin-right:20px;
+	float:left;
+}
+
+.menu-type-three .item-title {
+	font-size:18px;
+	font-weight:500;
+	color:#222222;
+	text-align:left;
+	position:relative;
+}
+
+.type-three-title {
+	padding-right: 10px;
+	z-index: 1;
+	position: relative;
+	display: inline-block;
+	background: #fff;
+}
+
+.menu-type-three .label {
+	color:#f5f5f5;
+	background:#fc4225;
+	padding: 3px 5px;
+	border-radius:3px;
+	font-size:12px;
+	margin-left:5px;
+} 
+
+.menu-type-three .item-title span {
+	float:right;
+	margin-left:10px;
+	color: #fc4225;
+}
+
+.menu-type-three p {
+	clear:right;
+}
+
+/* // 5.3 Menu Type Three 
+====================================================== */
+
+
+/* 5.4 Menu Type Four 
+====================================================== */
+
+.menu-type-four .card.small {
+	height: 350px;
+}
+
+
+.menu-type-four .card-image{
+
+}
+	
+.menu-type-four .card .card-title {
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.menu-type-four .label {
+	color:#f5f5f5;
+	background:#fc4225;
+	padding: 3px 5px;
+	border-radius:3px;
+	font-size:12px;
+	margin-left:5px;
+}
+
+.menu-type-four .card .price {
+	padding-right:20px;
+	float:right;
+	font-size: 20px;
+	font-weight: 500;
+	color:#fc4225;
+}
+
+.menu-type-four .card .card-content {
+	height:300px;
+	padding: 1px 20px;
+}
+
+.menu-type-four .card .card-content p{
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+
+.menu-type-four .card-action {
+	font-size:16px;
+	font-weight:400;
+}
+
+.menu-type-four i {
+	vertical-align: middle;
+	font-size:x-large;
+}
+
+.menu-type-four .card .card-action a{
+	font-weight:500;	
+}
+
+.menu-type-four .card a:hover {
+	color:#fc4225;
+}
+.menu-type-four .card .link-arrow {
+	font-size:18px;
+}
+
+/* // 5.4 Menu Type Four 
+====================================================== */
+
+
+/* 5.5 Menu Type Five 
+====================================================== */
+
+.menu-type-five .card-image{
+	height:200px;	
+	}
+.menu-type-five .card .card-title {
+	font-size: 20px;
+	font-weight: 500;
+	color:#252525;
+}
+
+.menu-type-five .label {
+	color:#f5f5f5;
+	background:#fc4225;
+	padding: 3px 5px;
+	border-radius:3px;
+	font-size:12px;
+	margin-left:5px;
+}
+
+.menu-type-five .card-reveal {
+	padding:0;
+}
+
+.menu-type-five .card-reveal .card-title {
+	padding:20px;
+}
+.line {
+	border-top: 1px solid #dcdcdc;
+	position: relative; 
+}
+
+.line p {
+	padding:20px;
+	line-height:24px;
+}
+
+.menu-type-five .card .card-content p, .card a{
+	font-size:15px;
+	color:#737373;
+	text-transform:capitalize;
+}
+
+.menu-type-five .card-content .card-title {
+	line-height:0;
+}
+
+.menu-type-five .card i.right {
+	line-height:36px;
+}
+.menu-type-five .card-content .price{
+	font-size: 20px;
+	font-weight: 500;
+	color:#fc4225;
+}
+
+.menu-type-five .card-reveal .card-title i.right {
+	right:20px;
+}
+
+/* // 5.5 Menu Type Five 
+====================================================== */
+
+
+/* // 5. TAB MENU SETION
+======================================================*/
+
+
+/* 6. RESERVATION SETION
+======================================================*/
+
+.reservation-tag {
+	color:#252525;
+	font-weight:normal;
+}
+
+.reservation .select-wrapper {
+	margin-top:0;
+}
+
+.reservation i {
+	font-size:24px;
+	line-height:20px;
+	vertical-align: middle;
+}
+
+.reservation select {
+	/*padding: 5px 20px 5px 30px;*/
+	border:none;
+	border-bottom: 1px solid #9e9e9e;
+	outline:none;
+	background:transparent;
+	color: #9e9e9e;
+	margin-bottom:15px;
+}
+
+input[type=text] {
+	color:#9e9e9e
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=search]:focus, textarea:focus.materialize-textarea {
+  border-bottom: 1px solid #fc4225;
+  -webkit-box-shadow: 0 1px 0 0 #fc4225;
+  -moz-box-shadow: 0 1px 0 0 #fc4225;
+  box-shadow: 0 1px 0 0 #fc4225; 
+}
+
+ .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=url]:focus + label, .input-field input[type=date]:focus + label, .input-field input[type=tel]:focus + label, .input-field input[type=number]:focus + label, .input-field input[type=search]:focus + label, .input-field textarea:focus.materialize-textarea + label {
+    color: #fc4225; }
+
+.picker__date-display{
+	background-color: #fc4225;
+}
+
+.picker__weekday-display,
+.picker--focused .picker__day--selected  {
+	background-color: #F53517;
+}
+
+.picker--focused .picker__day--highlighted,
+.picker__close, 
+.picker__today {
+	color: #fc4225;
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+	color:#ffffff!important;
+}
+
+.picker--focused .picker__day--selected.picker__day--outfocus {
+    background:rgba(252,56,37,.4); 
+}
+
+.picker__year-display {
+	color: #9D2512;
+}
+
+.reservation .input-field label.active {
+	display:none;
+}
+
+.reservation .input-field label {
+	left:0rem;
+}
+
+.reservation .input-field .prefix {
+	position:relative;
+}
+
+/* // 6. RESERVATION SETION
+======================================================*/
+
+
+
+/* 7. GALLERY SETION
+======================================================*/
+
+.gallerybg h1 {
+	color:#fff;
+}
+
+.gallerybg .tag {
+	color: #737373;
+}
+
+/* // 7. GALLERY SETION
+======================================================*/
+
+
+/* 8. chef SETION
+======================================================*/
+
+.card .card-title {
+	font-size: 20px;
+	font-weight: 500;
+	color:#252525;
+	position:relative;
+}
+
+.card .card-content p, .card a{
+	font-size:16px;
+	color:#737373;
+}
+
+.card a{
+	color:#fc4225;
+	text-transform:uppercase;
+}
+
+.card .card-content .card-title {
+	line-height:0;
+	text-transform:capitalize;
+}
+
+.card i.right {
+	line-height:36px;
+}
+
+.card-reveal .card-title i.right {
+	line-height:36px;
+	position: absolute;
+	margin-left:5px;
+	right:0;
+}
+
+.card .social-icons a:hover {
+	color:#fc4225;
+}
+
+.card .social-icons, .card .social-icons a {
+	padding:0;
+}
+
+/* // 8. chef SETION
+======================================================*/
+
+/* 9. CONTACT SETION
+======================================================*/
+
+.input-field .prefix ~ input, 
+.input-field .prefix ~ textarea {
+	margin-left:1.5rem;
+}
+
+.input-field .prefix {
+	font-size:20px;
+	line-height:44px;
+	color:#737373;
+}
+
+.input-field .prefix.active {
+      color: #fc4225;
+}
+
+.input-field .prefix ~ label {
+	margin-left: 1.7rem;
+}
+
+.contact .btn {
+	margin-left: 1.5rem;
+}
+
+.contact-details {
+	color:#737373;
+	font-size:15px;
+}
+
+.contact-details a {
+	color:#737373;
+}
+
+.cont-info-left {
+	margin-right:10px;
+	float:left;
+	font-size:18px;
+}
+
+.cont-info-right {
+	width:80%;
+	float:left;
+}
+
+.social-space a {
+	margin-right:8px;
+}
+
+.social-space i {
+	font-size:20px;
+}
+
+.social-space i:hover {
+	text-shadow: 1px 1px 0px rgba(0,0,0,.3);
+}
+
+.social-space i:first-child {
+	padding-left:0;
+}
+
+
+.social-space .facebook {
+	color:#6078aa;
+}
+
+.social-space .twitter {
+	color:#00acee;
+}
+
+.social-space .youtube {
+	color:#cd332d;
+}
+
+.social-space .dribbble {
+	color:#de3777;
+}
+
+.contactbg {
+background: url(../img/contact_map.jpg);
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.contact-overlay {
+	background:rgba(245, 245, 245, .9);
+}
+
+
+/* // 9. CONTACT SETION
+======================================================*/
+
+
+/* 10. FOOTER AND MAP SETION
+======================================================*/
+
+/* 10.1 MAP SETION
+================================= */
+
+#map_canvas { margin: 0; padding: 0; height: 500px; width:100%; border-radius:4px;}
+
+.map_wrapper{
+	float:left;
+	width:100%;
+	height:0;
+	position:relative;
+	bottom:35px;
+	z-index:3;
+	overflow:hidden;	
+}
+#map_canvas { 
+	height: 450px; 
+	position:absolute;
+	top:0;
+	left:0; 
+	width:100%;
+	z-index:1; 
+}
+.map-close {
+	position:absolute;
+	top:0;
+	right:0;
+	width:50px;
+	height:50px;
+	z-index:3;
+	cursor:pointer;
+}
+.map-close img {
+	position:absolute;
+	top:17px;
+	right:17px;
+	z-index:2;
+}
+.close_box{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	border-radius:2px;
+	position:relative;
+	z-index:-1;
+}
+.close_box:hover{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	border-radius:2px;
+	position:relative;
+	z-index:-1;
+	border-color:#6f6f6f;
+}
+
+#foot_top{ position:relative;}
+#foot_top, #foot_top.footer-top-text {
+padding: 0;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+background:url(../img/map.png) #fc4225;
+color:#fff;
+}
+#foot_top:hover, #foot_top.footer-top-text:hover
+ {
+color: #ffffff;
+background-color:#333333;
+}
+.foot_top_txt > a {color: #fff;}
+.foot_top_txt > a:hover {color: #ffffff;}
+.foot_top_txt{
+font-size: 25px;
+line-height: 46px;
+padding: 35px 10%;
+text-align: center; 
+font-weight:100;
+}
+.foot_top_txt:hover{
+cursor:pointer;
+}
+.foot_icon  {
+vertical-align:middle;
+font-size: 46px;
+display: inline-block;
+margin-left: 10px;
+  -webkit-text-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+  -moz-text-shadow:  0 12px 15px rgba(0, 0, 0, 0.2);
+  text-shadow:  0 12px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* // 10.1 MAP SETION
+================================= */
+
+
+/* 10.2 FOOTER SETION
+================================= */
+
+.footer-logo {
+	width:130px;
+}
+
+.footer {
+	background:#32353a;
+	background:url(../img/footerbg.jpg);
+	padding:90px 0 40px 0;
+}
+
+.footer p {
+	color:#828282;
+	font-size:14px;
+
+}
+
+.footer span a {
+	color:#fd4326;
+}
+
+.footer .social-space i {
+	color:#fff;
+	padding-right:10px;
+}
+
+.footer-title {
+	font-size: 23px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #fff;
+	padding-bottom: 10px;
+}
+
+.footer-sub-title {
+	color:#fd4326;
+	font-size:17px;
+	margin-top:10px;
+}
+
+.footer-strip {
+	background:#25272b;
+	padding:40px 0 20px 0;
+	color:#737373;
+	font-size:13px;
+	text-transform:uppercase;
+}
+
+.footer-strip .valign {
+	margin-top:30px;
+	text-align:center;
+}
+
+.footer-strip .valign i {
+	margin-right: 5px;
+	font-size: 5px;
+	vertical-align: middle;
+}
+
+.footer-strip span a{
+	color:#fd4326;
+}
+
+.footer-strip {
+	position:relative;
+}
+
+.footer-strip .down-circle {
+	bottom: auto;
+	top: -25px;
+}
+
+/* // 10.2 FOOTER SETION
+================================= */
+
+/* // 10. FOOTER AND MAP SETION
+======================================================*/
+
+
+/* 11. MEDIA SETION
+======================================================*/
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+
+nav ul li a {
+	font-size:12px;
+}
+
+}
+
+@media only screen and (max-width : 990px) {
+
+.padding-25-per {
+  padding: 0px 12%;
+}
+
+.nav-wrapper ul {
+	display:none;
+}
+
+h1 {   font-size: 32px;   line-height: 36px;   }
+
+nav .brand-logo {
+padding-left:0px;
+}
+
+.home-banner {
+  position: relative;
+  padding-top: 55px;
+}
+.header-inner{position:fixed;}
+
+.slicknav_nav{
+	margin: 60px 0px 0px ;
+}
+
+.whitestrip {
+  height: 60px;
+  line-height: 60px;
+}
+
+
+/* Menu Type Three */
+.label-price {
+	float:none;
+	margin-bottom:10px;
+}
+
+.dots {
+	display:none;
+}
+
+/* // Menu Type Three */
+
+}
+
+@media only screen and (max-width : 600px) {
+.footer-strip img {
+	margin: 0 auto;
+	display: block;
+}
+
+.footer-strip .valign {
+	margin-top: 10px;
+}
+
+}
+
+@media only screen and (max-width : 600px) {
+
+.box-arrow:before {
+	left: 50%;
+	margin-left: -20px;
+	border-right-color: transparent;
+	border-bottom-color: #fff;
+	top: 0%;
+	margin-top: -35px;
+}
+
+.tabs li.tab a {
+	font-size:10px;
+}
+
+}
+
+@media only screen and (max-width : 480px) {
+
+
+.home-scroll-content {
+	margin-bottom:1px;
+}
+
+.padding-12-per,
+.padding-25-per {
+	padding:0;
+}
+
+.tabs li.tab a {
+	font-size:8px;
+}
+
+
+/* // Menu Type Two */
+.menu-type-two img {
+	width:220px;
+	height:126px;
+}
+
+.menu-type-two p {
+	width:auto;
+}
+
+/* // Menu Type Two */
+
+#video h1 {
+	font-size:24px;
+	line-height:32px;
+}
+
+.parallax .banner-logo i {
+	font-size: 40px;
+}
+
+.contact .btn {
+	margin-left:0;
+}
+
+.foot_top_txt {
+	font-size: 22px;
+	padding: 35px 1%;
+}
+
+.foot_icon {
+	font-size:32px;
+}
+
+}
+
+/* // 11. MEDIA SETION
+======================================================*/
+
+
+
+/* HACK CODE SETION
+======================================================*/
+
+/* Hack Code For IE9 */
+
+div#lean-overlay{z-index: 999999    \9\0;}
+
+/* Date Picker */
+
+.picker__wrap {
+	position: absolute\9;
+	top: 100%\9;
+	left: 90%\9;
+	-ms-transform: translateX(90%) translateY(100%)\9;
+	margin:0 auto\9;
+}
+
+/* Hack Code For IE9 */
+
+
+/*  Hack code for Safari*/
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+::i-block-chrome,.reservation select {
+	line-height:40px;
+}
+
+
+}
+
+/* //Hack code for Safari*/
+
+
+/* // HACK CODE SETION
+======================================================*/
+
+/* Form Section */
+#reservation_form .input-field input[type=text] {
+	display:block;
+}
+
+#reservation_form .input-field label.active {
+	transform:none;
+}
+
+#reservation_form label{ float:left; padding-top:0px; margin:0px 0px 0px 0px; }
+#reservation_form label.error{ 
+	color: #ff0000;
+	position:relative;
+	text-align: left;
+	font-size:11px;
+	font-weight:500;
+	top: -8px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#reservation_form label.valid {
+  color: #33a532;
+}
+
+#reservation_form_thanks p,
+#contact_form_thanks p {
+	color:#33a532;
+}
+
+#contact_form .input-field input[type=text],
+#contact_form .input-field textarea {
+	display:block;
+}
+
+#contact_form .input-field label.active {
+	transform:none;
+}
+
+#contact_form label{ float:left; padding-top:0px; margin:0px 0px 0px 0px; transition:none; }
+#contact_form label.error{ 
+	color: #ff0000;
+	position:relative;
+	text-align: left;
+	font-size:11px;
+	font-weight:500;
+	top: -8px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#contact_form label.valid {
+  color: #33a532;
+}
+
+
+/* Form Section */

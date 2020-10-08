@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <sac:AdditionalInformation>
+          <sac:AdditionalMonetaryTotal>
+            <cbc:ID>1001</cbc:ID>
+            <cbc:PayableAmount currencyID="USD">403.95</cbc:PayableAmount>
+          </sac:AdditionalMonetaryTotal>
+          <sac:AdditionalMonetaryTotal>
+            <cbc:ID>1002</cbc:ID>
+            <cbc:PayableAmount currencyID="USD">0.00</cbc:PayableAmount>
+          </sac:AdditionalMonetaryTotal>
+          <sac:AdditionalMonetaryTotal>
+            <cbc:ID>1003</cbc:ID>
+            <cbc:PayableAmount currencyID="USD">0.00</cbc:PayableAmount>
+          </sac:AdditionalMonetaryTotal>
+          <sac:AdditionalMonetaryTotal>
+            <cbc:ID>1004</cbc:ID>
+            <cbc:PayableAmount currencyID="USD">0.00</cbc:PayableAmount>
+          </sac:AdditionalMonetaryTotal>
+          <sac:AdditionalMonetaryTotal>
+            <cbc:ID>2005</cbc:ID>
+            <cbc:PayableAmount currencyID="USD">59.42</cbc:PayableAmount>
+          </sac:AdditionalMonetaryTotal>
+          <sac:AdditionalProperty>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Value><![CDATA[cuatrocientos setenta y seis con 66/100]]></cbc:Value>
+          </sac:AdditionalProperty>
+          <sac:SUNATTransaction>
+            <cbc:ID>01</cbc:ID>
+          </sac:SUNATTransaction>
+        </sac:AdditionalInformation>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature Id="SignatureSP"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FCUi9XqcwEAz2OualqSgHq37Gho=</DigestValue></Reference></SignedInfo><SignatureValue xmlns="http://www.w3.org/2000/09/xmldsig#">C7H2PJrj3sfzH1TZHthSZGYwYlHterV+ild8CSLYqHHkmfjoYuDNfSXO/bB353w5nvLFyKv/VHr22oHoqxWhpKtowA1q/VZH5+6/sMnffaq4aEmLSAwIJZgDP68gK+tZ0GkS1aaYeQ9xHsmdLUbACHw+Jv7Auf7+i+qo+JwMSxJc+ghHQBNz+voZIikY3flSY6wJsYSNQ3sL4ujllgzr8Hl8pNyhKuEfsdjMD25SBQs54Blanw2t+s3iPjZsLkSW44i+BBhMdd+daD6Mtd6Hy14ElAg0XMmiuBCkrNyaAbz4mnLGzMDaQkFdbp4PbErJLk8uudkLCD8B6mkDNYL1Og==</SignatureValue><KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><X509Data><X509SubjectName>E=emanrique66@hotmail.com, CN=EDMUNDO MANUEL MANRIQUE PRADO, OU=08378551, OU=20524525543, OU=Validated by ZyTrust Sociedad Anónima, O=ARDINI TRADING E.I.R.L., L=LIMA, C=PE</X509SubjectName><X509Certificate>MIIFyDCCBLCgAwIBAgIKZ/gXOwAAAAAXSDANBgkqhkiG9w0BAQsFADCBkjELMAkGA1UEBhMCQ0gxEDAOBgNVBAoTB1dJU2VLZXkxJjAkBgNVBAsTHUNvcHlyaWdodCAoYykgMjAxNiBXSVNlS2V5IFNBMRYwFAYDVQQLEw1JbnRlcm5hdGlvbmFsMTEwLwYDVQQDEyhXSVNlS2V5IENlcnRpZnlJRCBBZHZhbmNlZCBTZXJ2aWNlcyBDQSA0MB4XDTE3MTAwNDIwNTQ0MloXDTE4MTAwNDIwNTQ0MlowgegxCzAJBgNVBAYTAlBFMQ0wCwYDVQQHEwRMSU1BMSAwHgYDVQQKExdBUkRJTkkgVFJBRElORyBFLkkuUi5MLjEvMC0GA1UECwwmVmFsaWRhdGVkIGJ5IFp5VHJ1c3QgU29jaWVkYWQgQW7Ds25pbWExFDASBgNVBAsTCzIwNTI0NTI1NTQzMREwDwYDVQQLEwgwODM3ODU1MTEmMCQGA1UEAxMdRURNVU5ETyBNQU5VRUwgTUFOUklRVUUgUFJBRE8xJjAkBgkqhkiG9w0BCQEWF2VtYW5yaXF1ZTY2QGhvdG1haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvqJ96MC3tm3Aync5bFF2YQHb8PN1es1hjcY1AIjvv7Kv+A7YqKJtIH8P/1/gZnKwbacbIPwUY2D8UMiB8nTp24s6R5/1by0vJwA0pUvEKE66XJPSJy1KDRm+riLWKIGEM5j+QZJEqzcw1uwY7WXv3GbQ8tXATqzkXb/QD2B2jEdk1A4e6JUgN9J+7gQ8UqHZrOUGCqrfdt3sLQ6nBBeSiI96qEGR0lbMT0gYYxOdy11PKOiKW4ivPPC09C9fRZs3MQIEHx1iikEOHGWhJfa+uh/igZxjZYsM0jrIc8y8LTavq2JOZQ5DU7i9GNDFggFPa/ua8FbtGz0N7qthZePXwQIDAQABo4IBxjCCAcIwDgYDVR0PAQH/BAQDAgbAMB8GA1UdIwQYMBaAFPTkm1fSrsKeiE0AuiuvZcljqYebMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9wdWJsaWMud2lzZWtleS5jb20vY3JsL3djaWRhc2NhNC5jcmwwbQYIKwYBBQUHAQEEYTBfMDcGCCsGAQUFBzAChitodHRwOi8vcHVibGljLndpc2VrZXkuY29tL2NydC93Y2lkYXNjYTQuY3J0MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC53aXNla2V5LmNvbS8wKQYDVR0lBCIwIAYIKwYBBQUHAwIGCisGAQQBgjcKAwwGCCsGAQUFBwMEMDUGCSsGAQQBgjcVCgQoMCYwCgYIKwYBBQUHAwIwDAYKKwYBBAGCNwoDDDAKBggrBgEFBQcDBDA6BgNVHREEMzAxoBYGCAmSJomT8iwKoAoMCDA4Mzc4NTUxgRdlbWFucmlxdWU2NkBob3RtYWlsLmNvbTBEBgkqhkiG9w0BCQ8ENzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYFKw4DAgcwCgYIKoZIhvcNAwcwDQYJKoZIhvcNAQELBQADggEBAED61D1/ynaz2JJwZ01eNOU+RpWbFigNJPXGVka1N+phFWR2M1yp+gp/W7Dp5bh6WXPfoYMw0UDnCiqPtSpBPQR57uBXyob5E4t6HTsyqkkqdTiONVkPbxRtlsXmxGTB0LhQapdd/oTyU5ZMvMJZ1YSn9p+HfLS9PvFMQahlvizzxFrp6qcqGxA+FzlvYeZEJ7DO0C0TqEwDGzj0ymyBpoTTyl/fqjYDOL1Eq0GrnyuS1VZwEhinLUNMThk5WaBYuurrYXCWXK7NeAsUf5h7jZSUJMKKj5qrAuOwpG1Ub2dkEYd7M3tJ2fPpStNrsH47MxWaQRJPuORso5unWQzGCgw=</X509Certificate></X509Data></KeyInfo></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <DatosAdicionales xmlns="">
+          <Resolucion>232323</Resolucion>
+          <NumeroPedido>00010095</NumeroPedido>
+        </DatosAdicionales>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+  <cbc:CustomizationID>1.0</cbc:CustomizationID>
+  <cbc:ID>F001-00000004</cbc:ID>
+  <cbc:IssueDate>2018-06-18</cbc:IssueDate>
+  <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+  <cbc:DocumentCurrencyCode>USD</cbc:DocumentCurrencyCode>
+  <cbc:ExpiryDate>2018-07-18</cbc:ExpiryDate>
+  <cac:OrderReference>
+    <cbc:ID>9458</cbc:ID>
+  </cac:OrderReference>
+  <cac:DespatchDocumentReference>
+    <cbc:ID>001-00019912</cbc:ID>
+    <cbc:DocumentTypeCode>09</cbc:DocumentTypeCode>
+  </cac:DespatchDocumentReference>
+  <cac:Signature>
+    <cbc:ID>IDSignCF</cbc:ID>
+    <cac:SignatoryParty>
+      <cac:PartyIdentification>
+        <cbc:ID>20524525543</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[ARDINI TRADING E.I.R.L]]></cbc:Name>
+      </cac:PartyName>
+    </cac:SignatoryParty>
+    <cac:DigitalSignatureAttachment>
+      <cac:ExternalReference>
+        <cbc:URI>#SignatureCF</cbc:URI>
+      </cac:ExternalReference>
+    </cac:DigitalSignatureAttachment>
+  </cac:Signature>
+  <cac:AccountingSupplierParty>
+    <cbc:CustomerAssignedAccountID>20524525543</cbc:CustomerAssignedAccountID>
+    <cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[-]]></cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:ID>150133</cbc:ID>
+        <cbc:StreetName><![CDATA[JR. MANUEL MONTERO ROSAS NRO. 821 URB. SAN JUAN (ZONA D) LIMA - LIMA - SAN JUAN DE MIRAFLORES]]></cbc:StreetName>
+        <cbc:CityName>LIMA</cbc:CityName>
+        <cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+        <cbc:District>SAN JUAN DE MIRAFLORES</cbc:District>
+        <cac:AddressLine>
+          <cbc:Line><![CDATA[AV. ALAMEDA SUR MZA. F LOTE. 3-D ASC. DE VIVIENDA BELLO HORIZONTE]]></cbc:Line>
+        </cac:AddressLine>
+        <cac:AddressLine>
+          <cbc:Line><![CDATA[AV. ALAMEDA SUR MZA. F LOTE. 3-D ASC. DE VIVIENDA BELLO HORIZONTE]]></cbc:Line>
+        </cac:AddressLine>
+        <cac:Country>
+          <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[ARDINI TRADING E.I.R.L]]></cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cbc:CustomerAssignedAccountID>20562913344</cbc:CustomerAssignedAccountID>
+    <cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PostalAddress>
+        <cbc:StreetName><![CDATA[AV. PROCERES DE LA INDEPENDEN NRO. 2097 URB. SAN HILARION 2DA ETAPA]]></cbc:StreetName>
+        <cbc:District>S.J. DE LURIGANCHO-LIMA-LIMA</cbc:District>
+        <cac:Country>
+          <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[INVERSIONES REPUESTOS AUTOMOTRICES EL CENTRO E.I.R.L.]]></cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="USD">72.71</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxAmount currencyID="USD">72.71</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cac:TaxScheme>
+          <cbc:ID>1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:PayableAmount currencyID="USD">476.66</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">15</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="USD">73.41</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="USD">6.562</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:AllowanceCharge>
+      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+      <cbc:Amount currencyID="USD">10.01</cbc:Amount>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="USD">13.21</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxAmount currencyID="USD">13.21</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[DAEWOO TICO - BASE DE PALANCA DE CAMBIOS]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID><![CDATA[28180A78B0]]></cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="USD">5.561</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">15</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="USD">42.40</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="USD">3.79</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:AllowanceCharge>
+      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+      <cbc:Amount currencyID="USD">5.78</cbc:Amount>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="USD">7.63</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxAmount currencyID="USD">7.63</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[DAEWOO TICO - SOPORTE DE CAJA POSTERIOR (PESCADITO)]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID><![CDATA[11910A78B0]]></cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="USD">3.212</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>3</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">30</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="USD">84.75</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="USD">3.788</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:AllowanceCharge>
+      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+      <cbc:Amount currencyID="USD">11.56</cbc:Amount>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="USD">15.26</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxAmount currencyID="USD">15.26</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[TRICETA DE PALIER (19DIENTES X 28MM X 9.4MM)(NKT) - DAEWOO TICO, MATIZ, SPARK, SUZUKI ALTONEW]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID><![CDATA[44103-78B0]]></cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="USD">3.21</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>4</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">5</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="USD">95.35</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="USD">25.57</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:AllowanceCharge>
+      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+      <cbc:Amount currencyID="USD">13.00</cbc:Amount>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="USD">17.16</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxAmount currencyID="USD">17.16</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[DAEWOO TICO - ELECTROVENTILADOR DE PALETA NEGRA BASE PLASTICA]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID><![CDATA[17100A78B00]]></cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="USD">21.67</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>5</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">5</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="USD">108.05</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="USD">30</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:AllowanceCharge>
+      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+      <cbc:Amount currencyID="USD">19.07</cbc:Amount>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="USD">19.45</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxAmount currencyID="USD">19.45</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[TOYOTA AE100 - (FW013A) ELECTROVENTILADOR BASE PLASTICA (KK-2305A)]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID><![CDATA[16711-15271,16363-74]]></cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="USD">25.424</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>
