@@ -13,9 +13,9 @@
   @if(Auth::user()->idtipo === 'ADM' OR empty(Auth::user()) ) 
     @include('layouts2.partials.header')
     
-    <div id="main">      
+    <div id="main" class="main-full">      
       <!-- START WRAPPER -->
-      <div class="wrapper">
+      <div class="wrapper" >
         @include('layouts2.partials.sidebar')       
         <section id="content">
             @yield('sub-cabecera')

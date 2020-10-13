@@ -53,7 +53,7 @@ class UsuarioController extends Controller
         
         DB::table('users')
         ->insert([
-            'id'				=> $id,
+            // 'id'				=> $id,
             'nombre'			=> $request->nombre,
             'apellidos'         => $request->apellidos,
             'estado'            => 1,
@@ -64,7 +64,8 @@ class UsuarioController extends Controller
             'cargo'        		=> $request->cargo,
             'avatar'            => null,
             'telefono'    		=> $request->telefono,
-            'glosa'             => $request->glosa,
+            'glosa'             => $request->glosa, 
+            'idtipo'    		=> 'ADM',
             'created_at'    	=> date('Y-m-d h:m:s')
         ]);
 
@@ -107,6 +108,7 @@ class UsuarioController extends Controller
             'cargo'        		=> $request->cargo,
             'avatar'            => null,
             'telefono'    		=> $request->telefono,
+            'idtipo'    		=> 'ADM',
             'glosa'             => $request->glosa 
         ]);
 

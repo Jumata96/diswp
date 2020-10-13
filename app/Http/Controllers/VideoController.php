@@ -61,7 +61,7 @@ class VideoController extends Controller
         //   dd($request->u_video);
         
         $rules = array(      
-            'archivo'     => 'required|mimes:png,mp4,mp4v,mpg4,mpeg,mpg,mkv',
+            'archivo'     => 'required|mimes:mp4,mp4v,mpg4,mpeg,mpg,mkv',
         );
 
         $validator = Validator::make ( $request->all(), $rules );

@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('#data-table-simple').DataTable();
+    $('#data-table-simpleI').DataTable();
     
     
     var table = $('#data-table-row-grouping').DataTable({

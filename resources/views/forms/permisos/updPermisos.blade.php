@@ -32,57 +32,49 @@
 
 
 
-                  <div class="col m6 l8 offset-l2">
+                  <div class="col m6 l6 offset-l3">
                     <div class="card white">
                         <div class="card-content">
                             <span class="card-title">Datos Generales</span>
 
                             <div class="row">
 
-                              <div class="input-field col s12 l6">
+                              <div class="input-field col s12">
                                 <i class="material-icons prefix">clear_all</i>
                                 <input id="titulo" name="titulo" type="text" required data-error=".errorTxt2" maxlength="200" value="">
                                 <label for="titulo">Título</label>
                                 <div id="u_error2" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                               </div>
-                              
-                              <div class="input-field col s12 l6">
-                                <i class="material-icons prefix">attach_money</i>
-                                <input id="costo" name="costo"  type="number"   > 
-                                <label for="costo" class="">Costo del curso </label>
-                                <div id="u_error5" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
-                              </div> 
-                              <div class="col s12 m12 l6">
-                                
-                                <div class="col s1  m1 l1"> 
-                                  <i class="material-icons prefix">content_paste</i> 
-                                  <br>
-                                </div> 
-                                <div class="col s11 l11 m11"> 
-                                  <label for="horario">  Horario</label>
-                                  <select class="browser-default" id="horario" name="horario" required>
-                                    <option   disabled selected="">Seleccione </option>
-                                    @foreach($horarios as $val)
-                                      <option value="{{$val->codigo}}" selected> {{$val->dia}}</option> 
-                                    @endforeach
-                                  </select>
-                                  <div id="u_error4" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
-                                </div>
-                               <br><br>
-                            </div>  
-                            <div class="input-field col s12 l6">
-                              <i class="material-icons prefix">rotate_right</i>
-                              <input id="tiempo" name="tiempo"  type="text"   > 
-                              <label for="tiempo" class="">Duraciòn del curso </label>
-                              <div id="u_error4" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
-                            </div>
-                            <div class="input-field col s12 l12">
+                              <div class="input-field col s12">
+                                <i class="material-icons prefix">rotate_right</i>
+                                <input id="tiempo" name="tiempo"  type="text"   > 
+                                <label for="tiempo" class="">Duraciòn del curso </label>
+                                <div id="u_error3" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                              </div>  
+                            <div class="input-field col s12">
                               <i class="material-icons prefix">mode_edit</i>
                               <textarea id="descripcion" name="descripcion" required  class="materialize-textarea" lenght="200" style="height: 80px"></textarea>
                               <label for="descripcion" class="">Descripción </label>
                               <div id="u_error3" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                             </div> 
-                            
+                            <div class="col s12 m12 l12">
+                              <label for="horario">Horario</label>
+                              <div class="col s1  m1 l1">
+                                <i class="material-icons prefix">content_paste</i>
+                              </div><br>
+                              <div class="col s11 l11 m11">
+                                
+                                <select class="browser-default" id="horario" name="horario" required>
+                                  <option   disabled selected="">Seleccione</option>
+                                  @foreach($horarios as $val)
+                                    <option value="{{$val->codigo}}" selected> {{$val->dia}}</option>
+
+                                  @endforeach
+                                </select>
+                                <div id="u_error4" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                              </div>
+                             <br><br>
+                          </div>
 
                             </div>
 

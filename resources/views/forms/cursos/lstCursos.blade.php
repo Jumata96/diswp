@@ -16,7 +16,7 @@
                           <a class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" href="{{ url('/addCursos') }}" data-position="top" data-delay="500" data-tooltip="Nuevo">
                             <i class="material-icons" style="color: #03a9f4">add</i>
                           </a>
-                          {{-- <a href="{{ url('/hotspot/pagina-publicidad') }}" target="_blank" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver prototipo página">
+                          {{-- <a href="{{ url('/hotspot/pagina-cursos') }}" target="_blank" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver prototipo página">
                             <i class="material-icons" style="color: #7986cb ">visibility</i>
                           </a>  --}}
                           <a style="margin-left: 6px"></a>                          
@@ -30,7 +30,7 @@
 
                       $bandera = false;
 
-                      if (count($publicidad) > 0) {
+                      if (count($cursos) > 0) {
                         # code...
                         $bandera = true;
                         $i = 0;
@@ -43,7 +43,7 @@
                     <div class="col s12 m12 l12">
                       
                         <div class="card-content">
-                          Existen <?php echo ($bandera)? count($publicidad) : 0; ?> registros. <br><br>
+                          Existen <?php echo ($bandera)? count($cursos) : 0; ?> registros. <br><br>
                           <table id="data-table-simple" class="responsive-table display" cellspacing="0">
                                <thead>
                                   <tr>
@@ -63,18 +63,27 @@
                                <tbody>
                                 <tr>
                                   <?php 
-                                      foreach ($publicidad as $datos) {
+                                      foreach ($cursos as $datos) {
                                       $i++;
                                    ?>
                                      <td><?php echo $i; ?></td>
                                      
-                                     <td><?php echo $datos->titulo ?></td>
-                                     <td><?php echo $datos->descripcion ?></td>
-                                      <td>{{$datos->nombre_original}}</td>
+                                     <td><?php echo $datos->nombre ?></td>
+                                     <td>
+                                       @foreach ($horarios as $item)
+                                        @if ($item->codigo == $datos->horario)
+                                            {{$item->dia}}
+                                        @endif
+                                           
+                                       @endforeach
+                                       
+                                      
+                                      <td>{{$datos->descripcion}}</td>
+                                      <td></td>
                                      
                                      <td><?php echo $datos->fecha_creacion ?></td>
                                      <td>
-                                      @if($datos->estado == 0)
+                                      @if($datos->estado == 2)
                                         <div id="u_estado" class="chip center-align" style="width: 70%">
                                             <b>NO DISPONIBLE</b>
                                           <i class="material-icons"></i>
@@ -87,7 +96,7 @@
                                       @endif
                                      </td>
                                      <td class="center" style="width: 9rem">
-                                       <a href="{{ url('/empresa/mostrar') }}/{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
+                                       <a href="{{ url('/Cursos/mostrar') }}/{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
                                         <i class="material-icons" style="color: #7986cb ">visibility</i>
                                       </a>                                       
                                        <a href="#confirmacion{{$i}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Eliminar">
@@ -102,7 +111,9 @@
                                        @endif
                                      </td>
                                   </tr>
-                                     {{--  @include('forms.empresa.scripts.alertaConfirmacion')  --}}
+                                     @include('forms.cursos.scripts.alertaConfirmacion')
+                                     @include('forms.cursos.scripts.alertaConfirmacion2')
+                                     @include('forms.cursos.scripts.alertaConfirmacion3')
                                   <?php }} ?>
                                </tbody>
                             </table>

@@ -48,8 +48,13 @@
         });
 
          $('#radio').click(function(e){
-          val = $('#left-sidebar-nav').data('valor');
+          radio_valor();
+          
 
+        });
+
+        function radio_valor(){
+          val = $('#left-sidebar-nav').data('valor'); 
           if(val == '0'){            
             $('.sideusuario').hide();
             $('#logoTexto').hide();
@@ -61,9 +66,10 @@
             $('#logoTexto').show();
             $('#left-sidebar-nav').data('valor','0');
           }
-          
 
-        });
+        }
+
+        var Var_JavaScript = 5;
 
         
 

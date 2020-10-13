@@ -1,18 +1,23 @@
 <!-- START LEFT SIDEBAR NAV-->
-        <aside id="left-sidebar-nav" data-valor="0" class="nav-expanded nav-lock nav-collapsible">
+       {{--  <aside id="left-sidebar-nav" data-valor="0" class="nav-expanded nav-lock nav-collapsible ">  --}}
+     
+            <aside  id="left-sidebar-nav"   data-valor="0" class="sidenav-main full main-full nav-collapsible   sidenav-active-square nav-collapsed">
+
+   
+
           <div class="brand-sidebar" style="height: 62px">
-            <h1 class="logo-wrapper">
-              <a href="{{url('/')}}" class="brand-logo darken-1">
-                <img id="imglogo" src="{{asset('img/logo.png')}}" alt="ardiniTrading" style="height: 26px">
-                <span class="logo-text sideusuario" style="padding-left: 0px;">
-                  <b style="color: #fafafa; font-style: normal;">ARDINI</b>TRADING
-                </span>
+
+            <h1 class="logo-wrapper white" style="padding-top: 8px; padding-left: 15px">
+              <a href="http://innovawisp.com" class="brand-logo darken-1" target="_blank">
+                <img src="{{asset('images/Isotipo.png')}}" alt="InnovaWifi" style=" height: 43px ;background-image: url('{{asset('images/Isotipo.png')}}') !importar;" >  
+                <span id="LogoInnovaTec" style="color:black;" class="logo-text hide-on-med-and-down "><b >Innova</b>Tec</span>  
+                 
+              </a>  
+              <a href="#" class="navbar-toggler"   id="radio" onclick="Materialize.fadeInImage('#sideusuario')" style="margin-left: 70px;padding-top: 5px;">
+                <i class="material-icons"  style="color:black;"   id="radio2">radio_button_checked</i>
               </a>
-              <a href="#" class="navbar-toggler" id="radio" onclick="Materialize.fadeInImage('.sideusuario')" >
-                <i class="material-icons" id="radio2">radio_button_checked</i>
-              </a>
-            </h1>
-          </div>
+            </h1>  
+          </div>  
           <ul id="slide-out" class="side-nav fixed leftside-navigation">
             <li class="no-padding">
               <ul class="collapsible" data-collapsible="accordion">
@@ -109,7 +114,7 @@
                         <span>Registro de videos </span>
                       </a>
                       </li> 
-                      <li><a href="{{ url('#') }}">
+                      <li><a href="{{ url('/lstPermisos') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
                         <span>Permisos del contenido</span></a>
                       </li> 
@@ -334,7 +339,7 @@
             </li>
           </ul>
           <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
-            <i class="material-icons">menu</i>
+            <i class="material-icons">menu</i> 
           </a>
         </aside>
         <!-- END LEFT SIDEBAR NAV-->

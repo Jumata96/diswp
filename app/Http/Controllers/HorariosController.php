@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Validator;
 use Auth; 
+use DateTime ; 
 
 class HorariosController extends Controller
 {
@@ -29,7 +30,7 @@ class HorariosController extends Controller
             ->update(['valor' => 0]);
         }
 
-        $horarios = DB::table('horarios')->get();
+        $horarios = DB::table('horarios')->whereIn('codigo', [1, 2])->get();
         // dd($publicidad);
 
         return view('forms.horarios.lstHorarios',[
@@ -39,9 +40,82 @@ class HorariosController extends Controller
     }
     public function addHorarios()
     {
-        return view('forms.horarios.addHorario',[
-            
-            ]);
+        return view('forms.horarios.addHorario',[        
+        ]);
     }
+    public function store(Request $request)
+    {
+        // dd($request);
+        $rules = array(      
+            'dia'    => 'required',
+            'horaInicio'   => 'required',
+            'horaFin'   => 'required'
+        );
+
+        $validator = Validator::make ( $request->all(), $rules );
+
+        if ($validator->fails()){
+            $var = $validator->getMessageBag()->toarray();
+            array_push($var, 'error');
+            return response()->json($var);
+        }   
+        DB::table('horarios')
+        ->insert([            
+            'estado'            => 1, 
+            'dia'            => $request->dia,
+            'horarioCierre'       => $request->horaFin,  
+            'horarioApertura'         => $request->horaInicio,
+            'descripcion'   => $request->descripcion,    
+            'fecha_creacion'    => date('Y-m-d H:m:s')
+        ]);   
+    
+  
+
+
+        return view('forms.horarios.addHorario',[        
+        ]);
+    }
+    public function destroy($id)
+    { 
+         
+            DB::table('horarios')
+            ->where('codigo',$id)
+            ->update([ 
+                'estado'            => '3',  
+            ]);
+
+        return redirect('/lsthorarios');
+    }
+    public function habilitar ($id){
+        //dd($id);
+        DB::table('horarios')
+        ->where('codigo',$id)
+        ->update([ 
+            'estado'            => '1',  
+        ]);
+        return redirect('/lsthorarios');
+
+    }
+    public function desabilitar ($id){
+        //dd($id);
+        DB::table('horarios')
+        ->where('codigo',$id)
+        ->update([ 
+            'estado'            => '2',  
+        ]);
+        return redirect('/lsthorarios');
+
+    }
+
+    public function show($id)
+    {
+        $horarios = DB::table('horarios')
+                    ->where('codigo',$id)->get();
+
+        return view('forms.horarios.updHorario',['horarios' => $horarios]);
+    }
+
+
+
 }
 

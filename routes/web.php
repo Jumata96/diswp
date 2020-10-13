@@ -296,10 +296,50 @@ Route::group(['middleware' => 'auth'], function(){
 	//horarios
 	Route::get('/lsthorarios', 'HorariosController@lstHorarios'); 
 	Route::get('/addHorarios', 'HorariosController@addHorarios'); 
+	Route::post('/horarios/grabar', 'HorariosController@store'); 
+	Route::get('/horarios/mostrar/{id}','HorariosController@show');
+	Route::get('/horarios/eliminar/{id}','HorariosController@destroy');
+	Route::get('/horarios/desabilitar/{id}','HorariosController@desabilitar');
+	Route::get('/horarios/habilitar/{id}','HorariosController@habilitar');
+
+ 
 
 	//clases
 	Route::get('/lstCursos', 'CursosController@lstCursos'); 
 	Route::get('/addCursos', 'CursosController@addCursos'); 
+	Route::post('/Cursos/grabar', 'CursosController@store'); 
+	Route::post('/Cursos/update', 'CursosController@update'); 
+	Route::get('/Cursos/mostrar/{id}','CursosController@show');
+	Route::get('/Cursos/eliminar/{id}','CursosController@destroy');
+	Route::get('/Cursos/desabilitar/{id}','CursosController@desabilitar');
+	Route::get('/Cursos/habilitar/{id}','CursosController@habilitar');
+
+
+	//Permisos permisos
+	Route::get('/lstPermisos', 'PermisosController@lstPermisos'); 
+	Route::get('/addPermisos', 'PermisosController@addPermisos'); 
+	Route::post('/permisos/grabar', 'PermisosController@store'); 
+	Route::get('/permisos/gestionar/{id}','PermisosController@show');
+	Route::post('/permisos/gestionar/videos','PermisosController@asignarVideos');
+	Route::post('/permisos/gestionarClientes','PermisosController@asignarClientes');
+
+	Route::get('/permisos/clientesEliminar/{id}','CursosController@destroy');
+	Route::get('/permisos/clientesDesabilitar/{id}','CursosController@desabilitar');
+	Route::get('/permisos/clientesHabilitar/{id}','CursosController@habilitar');
+
+
+
+	Route::get('/permisos/mostrar/{id}','PermisosController@show');
+	Route::get('/permisos/eliminar/{id}','PermisosController@destroy');
+	Route::get('/permisos/desabilitar/{id}','PermisosController@desabilitar');
+	Route::get('/permisos/habilitar/{id}','PermisosController@habilitar');
+
+
+
+	
+
+
+
 });
 
 

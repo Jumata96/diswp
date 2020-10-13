@@ -1,5 +1,5 @@
 @extends('layouts2.app')
-@section('titulo','Lista de Videos')
+@section('titulo','Lista de Horarios')
 
 @section('main-content')
 <br>
@@ -8,7 +8,7 @@
                 <div class="card">
                   <div class="card-header">                    
                     <i class="fa fa-table fa-lg material-icons">receipt</i>
-                    <h2>LISTA DE VIDEOS</h2>
+                    <h2>LISTA DE HORARIOS</h2>
                   </div>
                  
                   <div class="card-header" style="height: 50px; padding-top: 5px; background-color: #f6f6f6">
@@ -51,6 +51,7 @@
                                      <th>Dia</th>
                                      <th>Horario Apertura </th>
                                      <th>Horario Cierre </th>
+                                     <th>Descripciòn</th>
                                      <th>Fecha de creacion  </th>
                                      <th>Estado</th>
                                      <th>Acción</th>
@@ -67,13 +68,13 @@
                                    ?>
                                      <td><?php echo $i; ?></td>
                                      
-                                     <td><?php echo $datos->titulo ?></td>
-                                     <td><?php echo $datos->descripcion ?></td>
-                                      <td>{{$datos->nombre_original}}</td>
-                                     
+                                     <td><?php echo $datos->dia ?></td>
+                                     <td><?php echo $datos->horarioApertura ?></td>
+                                      <td>{{$datos->horarioCierre}}</td>
+                                      <td>{{$datos->descripcion}}</td> 
                                      <td><?php echo $datos->fecha_creacion ?></td>
                                      <td>
-                                      @if($datos->estado == 0)
+                                      @if($datos->estado == 2)
                                         <div id="u_estado" class="chip center-align" style="width: 70%">
                                             <b>NO DISPONIBLE</b>
                                           <i class="material-icons"></i>
@@ -84,9 +85,9 @@
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
-                                     </td>
+                                     </td> 
                                      <td class="center" style="width: 9rem">
-                                       <a href="{{ url('/empresa/mostrar') }}/{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
+                                       <a href="{{ url('/horarios/mostrar') }}/{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
                                         <i class="material-icons" style="color: #7986cb ">visibility</i>
                                       </a>                                       
                                        <a href="#confirmacion{{$i}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Eliminar">
@@ -101,7 +102,12 @@
                                        @endif
                                      </td>
                                   </tr>
-                                     {{--  @include('forms.empresa.scripts.alertaConfirmacion')  --}}
+                                  
+                                      @include('forms.horarios.scripts.alertaConfirmacion') 
+                                      @include('forms.horarios.scripts.alertaConfirmacion2') 
+                                      @include('forms.horarios.scripts.alertaConfirmacion3') 
+
+
                                   <?php }} ?>
                                </tbody>
                             </table>
