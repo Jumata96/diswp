@@ -4,7 +4,7 @@
 	</div>
 	<div class="modal-footer teal lighten-4">
 		<a href="#" class="waves-effectwaves-light btn-flat modal-action modal-close">Cancelar</a>
-	  <a  href="{{url('/zonas/habilitar')}}/{{$datos->id }}"  class="waves-effect waves-light btn-flat modal-action modal-close" id="h{{$datos->id }}" data-idcliente="{{$datos->id }}">Aceptar</a>
+	  <a  href="{{url('/permisos/habilitar')}}/{{$datos->id }}"  class="waves-effect waves-light btn-flat modal-action modal-close" id="h{{$datos->id }}" data-idcliente="{{$datos->id }}">Aceptar</a>
 	</div>
  </div>
 

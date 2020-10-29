@@ -79,7 +79,7 @@
                              
                               <div class="col s12">
                                 <div class="input-field col s12">
-                                 <div id="estado" class="chip center-align teal accent-4 white-text col s12 m6 l4 offset-m6 offset-l8">
+                                 <div id="estado" class="badge green lighten-5 green-text text-accent-4 col s12 m6 l4 offset-m6 offset-l8">
                                     ESTADO:<b> ACTIVO</b>
                                     <i class="material-icons"></i>
                                   </div>

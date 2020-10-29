@@ -1,6 +1,7 @@
 <script>
 	$('.btnSeleccionarCliente').on('click',function () { 
 		var dataId = $(this).attr("data-id"); 
+    console.log(dataId,"registrar");
 		var idCurso = $("input[name=idCurso]").val(); 
 		console.log(dataId,idCurso);
 		$.ajax({

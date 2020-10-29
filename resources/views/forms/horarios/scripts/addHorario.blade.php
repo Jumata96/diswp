@@ -7,7 +7,39 @@
     e.preventDefault();
 
     //var _token = $("input[name=_token]").val();
+    // document.getElementById('HIDDEN-INPUT').value = document.getElementById('Dias').innerHTML;
+    console.log( $('.chips-initial').material_chip('data'));
+    let dias = [ ];
+    dias=$('.chips-initial').material_chip('data');
+  
+    if(dias.length>1){
+      $('#formCursos').append("<input type='hidden' name='dias' value='si' />");
+    }else{
+      $('#formCursos').append("<input type='hidden' name='dias' value='' />");
+    } 
+    
+   let dias_horario="";
+   if(dias.length == 1){
+     for (y=0;y<dias.length; y++) {  
+      dias_horario=dias[y].tag ; 
+     } 
+   }else {
+    for (y=0;y<dias.length; y++) { 
+      if(y==dias.length-1){
+        dias_horario  +=" y "+dias[y].tag;
+      }else if(y==0){ 
+        dias_horario  +=dias[y].tag;
+      }else{ 
+        dias_horario  +=" , "+dias[y].tag;
+      }
+
+    } 
+   } 
+   $('#formCursos').append("<input type='hidden' name='dias' value='"+dias_horario+"' />");    
+         
+
   var data = $('#formCursos').serializeArray();
+                         
 
     $.ajax({
         url: "{{ url('/horarios/grabar') }}",
@@ -26,14 +58,10 @@
       success:function(data){
           
           if ( data[0] == "error") {
-            ( typeof data.dia != "undefined" )? $('#u_error2').text(data.dia) : null;
-            ( typeof data.horaInicio != "undefined" )? $('#u_error3').text(data.horaInicio) : null;
-            ( typeof data.horaFin != "undefined" )? $('#u_error4').text(data.horaFin) : null;
-          } else {   
-
-            var obj = $.parseJSON(data);
-  
-
+            ( typeof data.dias != "undefined" )? $('#u_error2').text(data.dias) : null; 
+            ( typeof data.detalle != "undefined" )? $('#u_error3').text(data.detalle) : null; 
+            
+          } else {    
             setTimeout(function() {
               Materialize.toast('<span>Registro exitoso</span>', 1500);
             }, 100); 

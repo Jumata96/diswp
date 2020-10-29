@@ -38,7 +38,7 @@
                 "<td>"+ obj[0]['titulo'] +"</td>"+
                 "<td>"+ obj[0]['fecha_creacion'] +"</td>"+
                 "<td class='center'>"+
-                    "<div id='estado2' class='chip center-align teal accent-4 white-text' style='width: 70%'>"+
+                    "<div id='estado2' class='badge green lighten-5 green-text text-accent-4' style='width: 70%'>"+
                       "<b>ACTIVO</b>"+
                       "<i class='material-icons'></i>"+
                     "</div>"+

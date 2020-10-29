@@ -36,7 +36,7 @@
                 "<td>"+ obj[0]['email'] +"</td>"+
                 "<td>"+ obj[0]['created_at'] +"</td>"+
                 "<td class='center' style='width: 9rem'>"+
-                    "<div id='estado' class='chip center-align' style='width: 70%'>"+
+                    "<div id='estado' class='badge grey darken-2 white-text text-accent-5' style='width: 70%'>"+
                       "<b>NO DISPONIBLE</b>"+
                       "<i class='material-icons'></i>"+
                     "</div>"+

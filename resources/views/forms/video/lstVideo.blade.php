@@ -72,36 +72,39 @@
                                       <td>{{$datos->nombre_original}}</td>
                                      
                                      <td><?php echo $datos->fecha_creacion ?></td>
-                                     <td>
+                                     <td style="text-align: center">
                                       @if($datos->estado == 0)
-                                        <div id="u_estado" class="chip center-align" style="width: 70%">
+                                        <div id="u_estado" class="badge grey darken-2 white-text text-accent-5" >
                                             <b>NO DISPONIBLE</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @else
-                                        <div id="u_estado2" class="chip center-align teal accent-4 white-text" style="width: 70%">
+                                        <div id="u_estado2" class="badge green lighten-5 green-text text-accent-4" >
                                           <b>ACTIVO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
                                      </td>
-                                     <td class="center" style="width: 9rem">
-                                       <a href="{{ url('/empresa/mostrar') }}/{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
+                                     <td >
+                                       <a href="{{ url('/videos/mostrar') }}/{{$datos->codigo}}" class="tooltipped" data-position="top" data-delay="500" data-tooltip="Ver">
                                         <i class="material-icons" style="color: #7986cb ">visibility</i>
                                       </a>                                       
-                                       <a href="#confirmacion{{$i}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Eliminar">
+                                       <a href="#confirmacion{{$datos->codigo}}" class="tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Eliminar">
                                         <i class="material-icons" style="color: #dd2c00">remove</i>
                                       </a>
                                       @if($datos->estado == 1)                                      
-                                       <a href="#h_confirmacion2{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Desabilitar">
+                                       <a href="#h_confirmacion2{{$datos->codigo}}" class="tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Desabilitar">
                                         <i class="material-icons" style="color: #757575 ">clear</i></a>
                                        @else
-                                       <a href="#h_confirmacion3{{$datos->codigo}}" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Habilitar">
+                                       <a href="#h_confirmacion3{{$datos->codigo}}" class="tooltipped modal-trigger" data-position="top" data-delay="500" data-tooltip="Habilitar">
                                         <i class="material-icons" style="color: #2e7d32 ">check</i></a>
                                        @endif
                                      </td>
                                   </tr>
-                                     {{--  @include('forms.empresa.scripts.alertaConfirmacion')  --}}
+                                     
+                                  @include('forms.video.scripts.alertaConfirmacion')
+                                  @include('forms.video.scripts.alertaConfirmacion2')
+                                  @include('forms.video.scripts.alertaConfirmacion3')
                                   <?php }} ?>
                                </tbody>
                             </table>

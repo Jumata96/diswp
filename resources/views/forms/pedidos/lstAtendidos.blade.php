@@ -72,12 +72,12 @@
                                      <td>{{$valor->total}}</td>
                                      <td class="center">
                                         @if($valor->estado == 'PE')
-                                        <div class="chip center-align" style="width: 70%">
+                                        <div class="badge grey darken-2 white-text text-accent-5" >
                                             <b>PENDIENTE DE PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @else
-                                        <div class="chip center-align teal accent-4 white-text" style="width: 70%">
+                                        <div class="badge green lighten-5 green-text text-accent-4" >
                                           <b>ACTIVO</b>
                                           <i class="material-icons"></i>
                                         </div>

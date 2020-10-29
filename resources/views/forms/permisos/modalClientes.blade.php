@@ -2,7 +2,7 @@
 	<div class="modal-content" style="padding: 0px; overflow-y: disabled; height: 300%; background-color: #f9f9f9">
 		<div class="card-header" style="position: fixed; width: 100%; z-index: 2">                    
 			<i class="fa fa-table fa-lg material-icons">receipt</i>
-			<h2>LISTA DE VIDEOS</h2>   
+			<h2>LISTA DE ALUMNOS</h2>   
 			</div> <div class="row card-header sub-header" style="margin-top: 3.15rem; margin-left: 0rem; margin-right: 0rem; position: fixed; width: 100%; z-index: 3">
 			<div class="col s12 m12 herramienta">                         
 			  <a id="select" class="btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-position="top" data-delay="500" data-tooltip="Seleccionar">
@@ -35,27 +35,32 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th class="center">Titulo</th>
-										<th>descripción</th> 
+										<th  >Nombre</th>
+										<th>Documento</th> 
 										<th>Fecha de registro</th>
 										<th>Acciones</th>
 									</tr>
 								</thead>
-								<?php
+								
+								<tbody>
+									<?php
 										if($bandera){                                                           
 									?> 
-								<tbody>
 									<tr>
 									<?php foreach ($clientes as $datos) { $i++;?>
 										 <td ><?php echo $i; ?></td>
-										 <td> {{$datos->nombres }}</td>
-										 <td>{{$datos->nro_documento}}</td>
-										 <td>{{ date("Y-m-d", strtotime($datos->fecha_creacion))}}</td> 
+										 <td> {{$datos['nombres'] }}</td>
+										 <td>{{$datos['nro_documento']}}</td>
+										 <td>{{ date("Y-m-d", strtotime($datos['fecha_creacion']))}}</td> 
+										 @php
+											 $idCliente=null;
+											 $idCliente=$datos['idcliente']; 
+										 @endphp
 										 <td class="center" style="width: 9rem"> 
-											<a  class="btnSeleccionarCliente btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-tooltip="Seleccionar"  data-id="{{$datos->idcliente}}" ><i class="material-icons " style="color: #2E7D32">check</i></a>  
+											<a  class="btnSeleccionarCliente btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-tooltip="Seleccionar"  data-id="{{$idCliente}}" ><i class="material-icons " style="color: #2E7D32">check</i></a>  
 								  		</td>
 									</tr> 
-									<?php }} ?>
+									<?php }}  ?> 
 								</tbody>
 							</table> 
 						</div>  

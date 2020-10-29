@@ -23,7 +23,7 @@
                   </a>                  
                 </li>
               </ul>
-            </li>
+            </li>{{-- 
             <li class="no-padding">
               <ul class="collapsible" data-collapsible="accordion">                
                 <li class="bold">
@@ -33,7 +33,7 @@
                   </a>                  
                 </li>
               </ul>
-            </li>
+            </li> --}}
             <li class="no-padding">
               <ul class="collapsible" data-collapsible="accordion">                
                 <li class="bold">
@@ -45,6 +45,16 @@
               </ul>
             </li>
             <li class="no-padding">
+              <ul class="collapsible" data-collapsible="accordion">                
+                <li class="bold">
+                  <a class=" waves-effect waves-cyan" href="{{ url('/Cursos/disponibles') }}">
+                    <i class="material-icons">person</i>
+                    <span class="nav-text">Cursos</span>
+                  </a>                  
+                </li>
+              </ul>
+            </li> 
+           {{--  <li class="no-padding">
               <ul class="collapsible" data-collapsible="accordion">                
                 <li class="bold">
                   <a class=" waves-effect waves-cyan" href="{{ url('/eDocs') }}">
@@ -73,7 +83,7 @@
                   </a>                  
                 </li>
               </ul>
-            </li>
+            </li> --}}
           </ul>
           <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
             <i class="material-icons">menu</i>

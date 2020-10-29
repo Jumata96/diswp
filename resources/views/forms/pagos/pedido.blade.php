@@ -51,13 +51,13 @@
                               
                               <div class="input-field col s12 m6 l3">
                                 @if($datos->estado == 'PE')
-                                        <div id="u_estado" class="chip center-align" style="width: 100%">
+                                        <div id="u_estado" class="badge grey darken-2 white-text text-accent-5" style="width: 100%">
                                             <b>PENDIENTE DE PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
                                       @if($datos->estado == 'PV')
-                                        <div id="u_estado2" class="chip center-align orange accent-1 white-text" style="width: 100%">
+                                        <div id="u_estado2" class="badge grey darken-2 white-text text-accent-5 orange accent-1 white-text" style="width: 100%">
                                           <b>VERIFICANDO PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>

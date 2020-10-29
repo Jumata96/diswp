@@ -60,19 +60,19 @@
                                      <td>{{$valor->total}}</td>
                                      <td class="center">
                                       @if($valor->estado == 'PE')
-                                        <div id="u_estado" class="chip" style="width: 70%">
+                                        <div id="u_estado" class="chip" >
                                             <b>PENDIENTE DE PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
                                       @if($valor->estado == 'PV')
-                                        <div id="u_estado2" class="chip orange accent-1 white-text" style="width: 70%">
+                                        <div id="u_estado2" class="chip orange accent-1 white-text" >
                                           <b>VERIFICAR PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
                                       @if($valor->estado == 'PA')
-                                        <div id="u_estado" class="chip indigo lighten-2 white-text center" style="width: 70%">
+                                        <div id="u_estado" class="chip indigo lighten-2 white-text center" >
                                             <b>PENDIENTE DE ENTREGA</b>
                                           <i class="material-icons"></i>
                                         </div>

@@ -45,25 +45,25 @@
                               <div class="col s3">
                                 <div class="input-field col s12">
                                   @if($datos->idarea == 'FAC')
-                                  <div class="chip center-align orange darken-4 white-text" style="width: 100%">
+                                  <div class="badge grey darken-2 white-text text-accent-5 orange darken-4 white-text" style="width: 100%">
                                     <b>ESTADO: FACTURACIÓN</b>
                                     <i class="material-icons"></i>
                                   </div>
                                   @endif
                                   @if($datos->idarea == 'ALM')
-                                  <div class="chip center-align indigo darken-4 white-text" style="width: 100%">
+                                  <div class="badge grey darken-2 white-text text-accent-5 indigo darken-4 white-text" style="width: 100%">
                                     <b>ESTADO: ALMACÉN</b>
                                     <i class="material-icons"></i>
                                   </div>
                                   @endif
                                   @if($datos->idarea == 'TRA')
-                                  <div class="chip center-align green darken-4 white-text" style="width: 100%">
+                                  <div class="badge grey darken-2 white-text text-accent-5 green darken-4 white-text" style="width: 100%">
                                     <b>ESTADO: TRANSPORTISTA</b>
                                     <i class="material-icons"></i>
                                   </div>
                                   @endif
                                   @if($datos->idarea <> 'FAC' AND $datos->idarea <> 'ALM' AND $datos->idarea <> 'TRA')                               
-                                  <div class="chip center-align grey darken-4 white-text" style="width: 100%">
+                                  <div class="badge grey darken-2 white-text text-accent-5 grey darken-4 white-text" style="width: 100%">
                                     <b>ESTADO: REPECIONADO</b>
                                     <i class="material-icons"></i>
                                   </div>

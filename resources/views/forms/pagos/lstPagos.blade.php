@@ -60,13 +60,13 @@
                                      <td class="center"><?php echo $datos->fecha ?></td>
                                      <td class="center">
                                       @if($datos->estado == 'PE')
-                                        <div id="u_estado" class="chip" style="width: 70%">
+                                        <div id="u_estado" class="chip" >
                                             <b>PENDIENTE DE PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>
                                       @endif
                                       @if($datos->estado == 'PV')
-                                        <div id="u_estado2" class="chip orange accent-1 white-text" style="width: 70%">
+                                        <div id="u_estado2" class="chip orange accent-1 white-text" >
                                           <b>VERIFICANDO PAGO</b>
                                           <i class="material-icons"></i>
                                         </div>

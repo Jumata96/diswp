@@ -15,7 +15,7 @@
 Route::get('/','PaginaController@index');
 Route::get('/index', 'PaginaController@index');
 //Catalogo de Productos
-Route::get('/catalogo', 'PaginaController@catalogo');
+/* Route::get('/catalogo', 'PaginaController@catalogo');
 Route::get('/catalogo/{id}', 'PaginaController@catalogoLinea');
 Route::post('/catalogo/producto', 'PaginaController@catalogoBuscarProducto');
 Route::get('/catalogo/producto/{id}', 'PaginaController@catalogoProducto');
@@ -23,7 +23,7 @@ Route::get('/producto', 'PaginaController@producto');
 Route::get('/contactanos', 'PaginaController@contactanos');
 Route::get('/linea/mostrar/{idgrupo}/{idtipo}','PaginaController@verMas');
 Route::get('/linea/mostrar/{idproducto}','PaginaController@verProducto');
-Route::get('/producto/tipo/{idtipo}','PaginaController@verProductoxTipo');
+Route::get('/producto/tipo/{idtipo}','PaginaController@verProductoxTipo'); */
 //Contactanos
 Route::post('/mensajes/grabar','ContactanosController@storeMensajes');
 //NOSOTROS
@@ -43,12 +43,12 @@ Route::get('/compras/historial','ComprasController@historialCompras');
 //Gestion de Acceso al Cliente
 Route::get('/usuarioLogin','ClienteController@inicio');
 Route::get('/portal-usuario','ClienteController@portal');
+Route::get('/sistema','ClienteController@portal');
 Route::get('/registroUsuario','ClienteController@registro');
 
 
 //Login para acceder al cPanel Empresarial
-Route::get('/cpanel','Auth\LoginController@inicio');
-Route::get('/sistema','Auth\LoginController@inicio');
+Route::get('/cpanel','Auth\LoginController@inicio'); 
 Route::view('/login','Auth\LoginController@inicio');
 Route::get('/userReg','Auth\LoginController@usuarioRegistrado');
 
@@ -216,13 +216,15 @@ Route::group(['middleware' => 'auth'], function(){
 
 	//Cliente
 	Route::get('/clientes','ClienteController@index');
-	Route::get('/cliente/mostrar/{id}','ClienteController@show');
+	Route::get('/cliente/nuevo','ClienteController@create'); 
+	Route::post('/cliente/grabar','ClienteController@store'); 
+	Route::get('/cliente/mostrar/{id}','ClienteController@show'); 
 	Route::post('/cliente/actualizar','ClienteController@update');
-	Route::post('/cliente/eliminar','ClienteController@destroy');
-	Route::post('/cliente/desabilitar','ClienteController@disabled');
-	Route::post('/cliente/habilitar','ClienteController@habilitar');
-	Route::get('/clientes/importar','ClienteController@importClientes');
-	Route::post('/clientes/import','HerramientasController@importarClientes');
+
+	Route::get('/cliente/eliminar/{id}','ClienteController@destroy');
+	Route::get('/cliente/desabilitar/{id}','ClienteController@disabled');
+	Route::get('/cliente/habilitar/{id}','ClienteController@habilitar'); 
+
 
 	//Perfil Cliente
 	Route::get('/perfil','ClienteController@perfil');
@@ -292,11 +294,20 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/hotspot/pagina-publicidad', 'VideoController@publicidad');
 	Route::get('videos/nuevo', 'VideoController@create');
 	Route::post('/carrusel/grabar', 'VideoController@store');
+	Route::get('/videos/mostrar/{id}','VideoController@show');
+	Route::post('/videos/update', 'VideoController@update'); 
+
+	Route::get('/videos/eliminar/{id}','VideoController@destroy');
+	Route::get('/videos/desabilitar/{id}','VideoController@desabilitar');
+	Route::get('/videos/habilitar/{id}','VideoController@habilitar');
+
 	
 	//horarios
 	Route::get('/lsthorarios', 'HorariosController@lstHorarios'); 
 	Route::get('/addHorarios', 'HorariosController@addHorarios'); 
 	Route::post('/horarios/grabar', 'HorariosController@store'); 
+	Route::post('/horarios/update', 'HorariosController@update');  
+
 	Route::get('/horarios/mostrar/{id}','HorariosController@show');
 	Route::get('/horarios/eliminar/{id}','HorariosController@destroy');
 	Route::get('/horarios/desabilitar/{id}','HorariosController@desabilitar');
@@ -304,7 +315,7 @@ Route::group(['middleware' => 'auth'], function(){
 
  
 
-	//clases
+	//Cursos
 	Route::get('/lstCursos', 'CursosController@lstCursos'); 
 	Route::get('/addCursos', 'CursosController@addCursos'); 
 	Route::post('/Cursos/grabar', 'CursosController@store'); 
@@ -313,6 +324,16 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/Cursos/eliminar/{id}','CursosController@destroy');
 	Route::get('/Cursos/desabilitar/{id}','CursosController@desabilitar');
 	Route::get('/Cursos/habilitar/{id}','CursosController@habilitar');
+	Route::get('/Curso/{id}','CursosController@showClientes'); 
+
+	Route::get('/CursoI/{id}','CursosController@showClientesVideos');
+
+
+
+	//view clientes
+	Route::get('/Cursos/disponibles', 'CursosController@lstcursosCliente'); 
+
+ 
 
 
 	//Permisos permisos
@@ -327,12 +348,14 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/permisos/clientesDesabilitar/{id}','CursosController@desabilitar');
 	Route::get('/permisos/clientesHabilitar/{id}','CursosController@habilitar');
 
-
-
 	Route::get('/permisos/mostrar/{id}','PermisosController@show');
 	Route::get('/permisos/eliminar/{id}','PermisosController@destroy');
 	Route::get('/permisos/desabilitar/{id}','PermisosController@desabilitar');
-	Route::get('/permisos/habilitar/{id}','PermisosController@habilitar');
+	Route::get('/permisos/habilitar/{id}','PermisosController@habilitar'); 
+
+	Route::get('/permisos/eliminarVideo/{id}','PermisosController@destroyVideo');
+	Route::get('/permisos/desabilitarVideo/{id}','PermisosController@desabilitarVideo');
+	Route::get('/permisos/habilitarVideo/{id}','PermisosController@habilitarVideo');
 
 
 

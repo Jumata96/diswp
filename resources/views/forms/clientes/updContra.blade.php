@@ -34,19 +34,19 @@
                                                   <i class="material-icons prefix">lock</i>
                                                   <input id="contra" name="contra" type="password">
                                                   <label for="contra">Contraseña actual</label>
-                                                  <div id="u_error1" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
+                                                  <div id="error1" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
                                                 </div>    
                                                 <div class="input-field col s12 m8 l6 offset-l3 offset-m2">
                                                   <i class="material-icons prefix">lock_outline</i>
                                                   <input id="contra2" name="contra2" type="password">
                                                   <label for="contra2">Nueva contraseña</label>
-                                                  <div id="u_error2" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
+                                                  <div id="error2" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
                                                 </div>    
                                                 <div class="input-field col s12 m8 l6 offset-l3 offset-m2">
                                                   <i class="material-icons prefix">lock_outline</i>
                                                   <input id="contra3" name="contra3" type="password">
                                                   <label for="contra3">Repetir contraseña nueva</label>
-                                                  <div id="u_error3" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
+                                                  <div id="error3" style="padding-left: 3rem; color: red; font-size: 12px; font-style: italic;"></div>
                                                 </div>           
                                               </div> 
                                             </div>

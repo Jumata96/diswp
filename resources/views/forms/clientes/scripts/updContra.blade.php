@@ -27,13 +27,13 @@
            success:function(data){
               
               if ( data[0] == "BAD_CONTRA") {
-                $('#u_error1').text("La contraseña es incorrecta") ;
+                $('#error1').text("La contraseña es incorrecta") ;
               }else if ( data[0] == "BAD_CONTRA2") {
-                $('#u_error2').text("La nueva contraseña no coincide")
+                $('#error2').text("La nueva contraseña no coincide")
               }else if ( data[0] == "error") {
-                ( typeof data.contra != "undefined" )? $('#u_error1').text("Este campo es obligatorio") : null;
-                ( typeof data.contra2 != "undefined" )? $('#u_error2').text("Este campo es obligatorio") : null;
-                ( typeof data.contra3 != "undefined" )? $('#u_error3').text("Este campo es obligatorio") : null;
+                ( typeof data.contra != "undefined" )? $('#error1').text("Este campo es obligatorio") : null;
+                ( typeof data.contra2 != "undefined" )? $('#error2').text("Este campo es obligatorio") : null;
+                ( typeof data.contra3 != "undefined" )? $('#error3').text("Este campo es obligatorio") : null;
               } else {   
 
                 //var obj = $.parseJSON(data);

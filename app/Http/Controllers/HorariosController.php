@@ -45,12 +45,12 @@ class HorariosController extends Controller
     }
     public function store(Request $request)
     {
-        // dd($request);
+         
         $rules = array(      
-            'dia'    => 'required',
-            'horaInicio'   => 'required',
-            'horaFin'   => 'required'
+            'dias'    => 'required', 
+            'detalle'  =>'required', 
         );
+        
 
         $validator = Validator::make ( $request->all(), $rules );
 
@@ -58,17 +58,50 @@ class HorariosController extends Controller
             $var = $validator->getMessageBag()->toarray();
             array_push($var, 'error');
             return response()->json($var);
-        }   
+        }
+            
         DB::table('horarios')
         ->insert([            
             'estado'            => 1, 
-            'dia'            => $request->dia,
-            'horarioCierre'       => $request->horaFin,  
-            'horarioApertura'         => $request->horaInicio,
-            'descripcion'   => $request->descripcion,    
+            'dia'               => strtoupper($request->dias), 
+            'descripcion'       => strtoupper($request->detalle), 
+            'glosa'             =>$request->glosa, 
             'fecha_creacion'    => date('Y-m-d H:m:s')
         ]);   
     
+  
+
+
+        return view('forms.horarios.addHorario',[        
+        ]);
+    }
+    public function update(Request $request)
+    {
+        // dd($request);
+         
+        $rules = array(      
+            'dias'    => 'required', 
+            'detalle'  =>'required', 
+        );
+        
+
+        $validator = Validator::make ( $request->all(), $rules );
+
+        if ($validator->fails()){
+            $var = $validator->getMessageBag()->toarray();
+            array_push($var, 'error');
+            return response()->json($var);
+        }
+            
+        DB::table('horarios')
+        ->where('codigo',$request->codigo)
+            ->update([ 
+                'estado'            => 1, 
+                'dia'               => strtoupper($request->dias), 
+                'descripcion'       => strtoupper($request->detalle), 
+                'glosa'             =>$request->glosa, 
+                'fecha_creacion'    => date('Y-m-d H:m:s')  
+            ]); 
   
 
 
@@ -111,6 +144,7 @@ class HorariosController extends Controller
     {
         $horarios = DB::table('horarios')
                     ->where('codigo',$id)->get();
+                    // dd($horarios);
 
         return view('forms.horarios.updHorario',['horarios' => $horarios]);
     }

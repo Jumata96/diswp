@@ -11,7 +11,7 @@ use Auth;
 
 class UsuarioController extends Controller
 {
-    public function index()
+        public function index()
     {
         $valida = 0;
 

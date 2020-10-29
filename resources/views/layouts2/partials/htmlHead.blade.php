@@ -1,6 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title> ardiniTrading - @yield('titulo', 'Inicio') </title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -29,11 +30,8 @@
     <link href="{{asset('js/plugins/chartist-js/chartist.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{{asset('js/plugins/data-tables/css/jquery.dataTables.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
     <!--dropify-->
-    <link href="{{asset('css/dropify.min.css')}}" type="text/css" rel="stylesheet">
-
-  
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="{{asset('css/dropify.min.css')}}" type="text/css" rel="stylesheet"> 
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 
   
   </head>

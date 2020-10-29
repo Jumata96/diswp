@@ -32,7 +32,7 @@ class VideoController extends Controller
             ->update(['valor' => 0]);
         }
 
-        $publicidad = DB::table('videos')->get();
+        $publicidad = DB::table('videos')->whereIn('estado',[1,2])->get();
         // dd($publicidad);
 
         return view('forms.video.lstVideo',[
@@ -45,6 +45,14 @@ class VideoController extends Controller
     {
         return view('forms.video.mntVideo',[
             
+        ]);
+    }
+    public function show($id)
+    { 
+        $videos = DB::table('videos')->where('codigo',$id)->get(); 
+
+        return view('forms.video.updVideo',[
+            'videos'        =>$videos
         ]);
     }
 
@@ -94,7 +102,7 @@ class VideoController extends Controller
             'estado'            => 1, 
             'titulo'            => $request->titulo,
             'descripcion'       => $request->descripcion,  
-            'url_video'         =>'videos/'.$url_video,
+            'url_video'         =>  $url_video,
             'nombre_original'   => $request->u_video,       
             'extension'         => $extension,  
             'fecha_creacion'    => date('Y-m-d H:m:s')
@@ -116,6 +124,61 @@ class VideoController extends Controller
         /* $data['success'] =; 
 
         return $data; */
+    }
+
+    public function update(Request $request)
+    { 
+        // dd( $request);
+        $rules = array(      
+            'titulo'          => 'required', 
+            'descripcion'     => 'required',
+        );
+
+        $validator = Validator::make ( $request->all(), $rules );
+
+        if ($validator->fails()){
+            $var = $validator->getMessageBag()->toarray();
+            array_push($var, 'error');
+            return response()->json($var);
+        } 
+     
+        DB::table('videos')
+            ->where('codigo',strval( $request->idVideo))
+            ->update([ 
+            'titulo'            => $request->titulo,
+            'descripcion'       => $request->descripcion
+            ]); 
+    }
+    public function destroy($id)
+    { 
+        
+            DB::table('videos')
+            ->where('codigo',$id)
+            ->update([ 
+                'estado'            => '3',  
+            ]);
+
+        return redirect('/lstVideos');
+    }
+    public function habilitar ($id){
+        //dd($id);
+        DB::table('videos')
+        ->where('codigo',$id)
+        ->update([ 
+            'estado'            => '1',  
+        ]);
+        return redirect('/lstVideos');
+
+    }
+    public function desabilitar ($id){
+        //dd($id);
+        DB::table('videos')
+        ->where('codigo',$id)
+        ->update([ 
+            'estado'            => '2',  
+        ]);
+        return redirect('/lstVideos');
+
     }
 
     //

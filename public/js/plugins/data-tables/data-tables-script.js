@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $('#data-table-simple').DataTable();
     $('#data-table-simpleI').DataTable();
+    $('#data-table-simpleII').DataTable();
+    $('#data-table-simpleIII').DataTable();
+    $('#data-table-simpleIV').DataTable();
     
     
     var table = $('#data-table-row-grouping').DataTable({

@@ -90,10 +90,10 @@
                                                     
                                                     <div class="col s12">
                                                       <div class="input-field col s12">
-                                                       <div id="u_estado" class="chip center-align teal accent-4 white-text col s12 m6 l6 offset-m6 offset-l6">
+                                                       <div id="u_estado" class="badge green lighten-5 green-text text-accent-4 col s12 m6 l6 offset-m6 offset-l6">
                                                           ESTADO:<b> ACTIVO</b>                                                          
                                                         </div>
-                                                        <div id="u_estado2" class="chip center-align grey accent-4 white-text col s12 m6 l6 offset-m6 offset-l6">
+                                                        <div id="u_estado2" class="badge grey darken-2 white-text text-accent-5 grey accent-4 white-text col s12 m6 l6 offset-m6 offset-l6">
                                                           ESTADO:<b> NO DISPONIBLE</b>                                                          
                                                         </div>
                                                       </div> 

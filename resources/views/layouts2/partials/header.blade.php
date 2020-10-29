@@ -1,5 +1,5 @@
 <!-- START HEADER -->
-    <header id="header" class="page-topbar z-depth-3">
+    <header id="header" class="page-topbar z-depth-1">
       <!-- start header nav-->
       <div class="navbar-fixed ">
         <nav class="navbar-color blue darken-1">

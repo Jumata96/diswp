@@ -66,12 +66,12 @@
 
               <div class="input-field col s12 s12 m6 l6 right-align">
                 @if($datos->estado == 0)
-                <div id="estado" class="chip center-align" style="width: 70%">
+                <div id="estado" class="badge grey darken-2 white-text text-accent-5" >
                   <b>ESTADO: NO DISPONIBLE</b>
                   <i class="material-icons"></i>
                 </div>
                 @else
-                <div id="estado2" class="chip center-align teal accent-4 white-text" style="width: 70%">
+                <div id="estado2" class="badge green lighten-5 green-text text-accent-4" >
                   <b>ESTADO: ACTIVO</b>
                   <i class="material-icons"></i>
                 </div>

@@ -179,11 +179,12 @@ class EmpresaController extends Controller
         
 
         $file = $request->file('imagenURL');
-        //dd($request);     
+        // dd($request);     
 
         if ($file != null) {
             $extension = $file->getClientOriginalExtension();
             $fileName = $file->getClientOriginalName();
+            /* dd('logo.'. $extension); */
             $path = public_path('images/'.$fileName);
             //dd( $fileName);
             Image::make($file)->save($path);

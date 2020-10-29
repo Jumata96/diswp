@@ -54,7 +54,7 @@
                 </div>
 
               <div class="input-field col s12 s12 m6 l6 right-align">
-                <div class="chip center-align" style="width: 70%">
+                <div class="badge grey darken-2 white-text text-accent-5" >
                   <b>Estado:</b> No Disponible
                   <i class="material-icons mdi-navigation-close"></i>
                 </div>

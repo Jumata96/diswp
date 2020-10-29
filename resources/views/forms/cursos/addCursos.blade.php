@@ -32,7 +32,7 @@
 
 
 
-                  <div class="col m6 l8 offset-l2">
+                  <div class="col s12 l8  ">
                     <div class="card white">
                         <div class="card-content">
                             <span class="card-title">Datos Generales</span>
@@ -43,14 +43,14 @@
                                 <i class="material-icons prefix">clear_all</i>
                                 <input id="titulo" name="titulo" type="text" required data-error=".errorTxt2" maxlength="200" value="">
                                 <label for="titulo">Título</label>
-                                <div id="u_error2" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                                <div id="u_error1" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                               </div>
                               
                               <div class="input-field col s12 l6">
                                 <i class="material-icons prefix">attach_money</i>
                                 <input id="costo" name="costo"  type="number"   > 
                                 <label for="costo" class="">Costo del curso </label>
-                                <div id="u_error5" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                                <div id="u_error2" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                               </div> 
                               <div class="col s12 m12 l6">
                                 
@@ -66,7 +66,7 @@
                                       <option value="{{$val->codigo}}" selected> {{$val->dia}}</option> 
                                     @endforeach
                                   </select>
-                                  <div id="u_error4" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                                  <div id="u_error3" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                                 </div>
                                <br><br>
                             </div>  
@@ -80,7 +80,7 @@
                               <i class="material-icons prefix">mode_edit</i>
                               <textarea id="descripcion" name="descripcion" required  class="materialize-textarea" lenght="200" style="height: 80px"></textarea>
                               <label for="descripcion" class="">Descripción </label>
-                              <div id="u_error3" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                              <div id="u_error5" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                             </div> 
                             
 
@@ -88,7 +88,47 @@
 
                         </div>
                     </div>
-                  </div>
+                  </div>   
+                  <div class="col s12 l4"> 
+                    <div class="card white">
+                        <div class="card-content"> 
+                                  <div class="file-field input-field  ">                                  
+                                    <div class="btn light-blue darken-1 ">
+                                      <span>SUBIR IMAGEN</span>
+                                      <input type="file" id="imagen" name="imagen" >
+                                    </div> 
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text" name="text" id="inputImagen">
+                                      <p class="right"><i>Solo se permiten archivos con extensión  
+                                         PNG , DOCX , JPG , PDF y ZIP. </i></p>
+                                         <div id="u_error6" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                                    </div>
+                                  
+                                </div>   
+
+                        </div>
+                    </div>
+                  </div> 
+                  <div class="col s12 l4"> 
+                    <div class="card white">
+                        <div class="card-content"> 
+                                  <div class="file-field input-field  ">                                  
+                                    <div class="btn light-blue darken-1 ">
+                                      <span>SUBIR VIDEO</span>
+                                      <input type="file" id="video" name="video" >
+                                    </div> 
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text" name="inputVideo" id="inputVideo">
+                                      <p class="right"><i>Solo se permiten archivos con extensión  
+                                         FLK , MP4 ,MKV, AVI. </i></p>
+                                         <div id="u_error7" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                                    </div>
+                                  
+                                </div>   
+
+                        </div>
+                    </div>
+                  </div> 
 
                 </div>
               </form>

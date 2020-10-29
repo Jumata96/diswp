@@ -36,7 +36,7 @@
                 "<td>"+ obj[0]['descripcion'] +"</td>"+
                 "<td>"+ obj[0]['fecha_creacion'] +"</td>"+
                 "<td class='center'>"+
-                    "<div id='hestado' class='chip center-align' style='width: 70%'>"+
+                    "<div id='hestado' class='badge grey darken-2 white-text text-accent-5' style='width: 70%'>"+
                       "<b>NO DISPONIBLE</b>"+
                       "<i class='material-icons'></i>"+
                     "</div>"+

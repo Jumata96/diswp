@@ -72,7 +72,7 @@
                                      <td><?php echo $datos->fecha ?></td>
                                      <td class="center">
                                       @if($datos->estado == 'PT')
-                                        <div id="u_estado" class="chip grey darken-2 white-text center" style="width: 70%">
+                                        <div id="u_estado" class="chip grey darken-2 white-text center" >
                                             <b>PEDIDO ENTREGADO</b>
                                           <i class="material-icons"></i>
                                         </div>

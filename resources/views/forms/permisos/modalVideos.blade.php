@@ -31,7 +31,7 @@
 								$contador=0;
 							@endphp
 							Existen <?php echo ($bandera)? count($videos) : 0; ?> registros. <br><br><br>
-							<table class="centered " >
+							<table class="centered striped" >
 								<thead>
 									<tr>
 										<th>#</th>
@@ -41,21 +41,29 @@
 										<th>Acciones</th>
 									</tr>
 								</thead>
-								<?php
+								
+								<tbody>
+									<?php
 										if($bandera){                                                           
 									?> 
-								<tbody>
 									<tr>
 									<?php foreach ($videos as $datos) { $i++;?>
 										 <td ><?php echo $i; ?></td>
-										 <td> {{$datos->titulo }}</td>
-										 <td>{{$datos->descripcion}}</td>
-										 <td>{{ date("Y-m-d", strtotime($datos->fecha_creacion))}}</td> 
+										 <td> {{$datos['titulo'] }}</td>
+										 <td>{{$datos['descripcion']}}</td>
+										 <td>{{ date("Y-m-d", strtotime($datos['fecha_creacion']))}}</td> 
 										 <td class="center" style="width: 9rem"> 
-											<a  class="btnSeleccionarVideo btn-floating waves-effect waves-light grey lighten-5 tooltipped" data-tooltip="Seleccionar"  data-id="{{$datos->codigo}}" ><i class="material-icons " style="color: #2E7D32">check</i></a>  
+											<a  class="btnSeleccionarVideo btn-floating waves-effect waves-light grey lighten-5 tooltipped"
+											 data-tooltip="Seleccionar"  data-id="{{$datos['codigo']}}" ><i class="material-icons " style="color: #2E7D32">check</i></a>  
 								  		</td>
-									</tr> 
-									<?php }} ?>
+									</tr>  
+									 <?php }} else{?>
+										<tr>
+											<td colspan="5" class="center" style="color: red"><h5>Todos los alumnos fueron agregados </h5></td>
+										</tr>
+										<?php } ?> 
+
+								 
 								</tbody>
 							</table> 
 						</div>  

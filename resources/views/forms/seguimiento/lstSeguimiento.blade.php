@@ -70,7 +70,7 @@
                                      <td><?php echo $datos->fecha ?></td>
                                      <td class="center">
                                       @if($datos->estado == 'PA')
-                                        <div id="u_estado" class="chip indigo lighten-2 white-text center" style="width: 70%">
+                                        <div id="u_estado" class="chip indigo lighten-2 white-text center" >
                                             <b>PENDIENTE DE ENTREGA</b>
                                           <i class="material-icons"></i>
                                         </div>

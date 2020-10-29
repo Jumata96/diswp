@@ -19,7 +19,7 @@
                             <i class="material-icons" style="color: #2E7D32">check</i>
                           </a>   
                           <a style="margin-left: 6px"></a>                          
-                          <a href="{{url('/hotspot/lstPublicidad')}}" class="btn-floating right waves-effect waves-light grey lighten-5 tooltipped" href="#!" data-activates="dropdown2" data-position="top" data-delay="500" data-tooltip="Regresar">
+                          <a href="{{url('/lstVideos')}}" class="btn-floating right waves-effect waves-light grey lighten-5 tooltipped" href="#!" data-activates="dropdown2" data-position="top" data-delay="500" data-tooltip="Regresar">
                             <i class="material-icons" style="color: #424242">keyboard_tab</i>
                           </a>                               
                         </div>  
@@ -114,55 +114,6 @@
 @endsection
   
 @section('script')
-<script>
-	$('#add_video').click(function(e){
-	  e.preventDefault();   
-	  var $Input, $myForm;
-        
-       // $Input = $('#archivo');
-        $myForm = $('#formVideo'); 
-        
-		  
-
-      var formData = new FormData(); 
-		  formData.append('archivo', $('#archivo')[0].files[0]);
-      console.log( $('#archivo')[0].files[0]);
-
-
-		 $.ajax({
-				beforeSend: function (xhr) {
-					 var token = $('meta[name="csrf-token"]').attr('content');
-
-					 if (token) {
-							 return xhr.setRequestHeader('X-CSRF-TOKEN', token);
-					 }
-				},
-				url: "{{ url('/carrusel/grabar') }}" + '?' + $myForm.serialize(),
-				method: 'POST',               
-				data: formData,
-				processData: false,
-				contentType: false,
-
-				 success: function(data){
-          if ( data[0] == "error") {
-						$('#u_error1').text('');
-						$('#u_error2').text('');
-						$('#u_error3').text('');						 
-						( typeof data.titulo != "undefined" )? $('#u_error2').text(data.iddocumento) && $('#titulo').focus() : null;
-					 ( typeof data.iddocumento != "undefined" )? $('#u_error3').text(data.iddocumento) : null;  
-					 }	 
-					console.log(data);  
-					 setTimeout(function() {
-                  Materialize.toast('<span>DOCUEMNTO ADJUNTADO CORRECTAMENTE</span>', 2000);
-                }, 200);  
-			 },
-				 error:function(){ 
-					 alert("no se cargo ningun archivo"); 
-
-			 }
-
-		  })  
-	}); 
-  </script>
+@include('forms.video.scripts.mntVideo')
 @endsection
 

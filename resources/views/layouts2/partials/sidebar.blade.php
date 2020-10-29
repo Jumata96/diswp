@@ -1,24 +1,24 @@
 <!-- START LEFT SIDEBAR NAV-->
        {{--  <aside id="left-sidebar-nav" data-valor="0" class="nav-expanded nav-lock nav-collapsible ">  --}}
+        
      
-            <aside  id="left-sidebar-nav"   data-valor="0" class="sidenav-main full main-full nav-collapsible   sidenav-active-square nav-collapsed">
+            <aside  id="left-sidebar-nav"     data-valor="0" class="sidenav-main  main-full nav-collapsible   sidenav-active-square nav-collapsed ">
 
-   
-
-          <div class="brand-sidebar" style="height: 62px">
-
-            <h1 class="logo-wrapper white" style="padding-top: 8px; padding-left: 15px">
-              <a href="http://innovawisp.com" class="brand-logo darken-1" target="_blank">
-                <img src="{{asset('images/Isotipo.png')}}" alt="InnovaWifi" style=" height: 43px ;background-image: url('{{asset('images/Isotipo.png')}}') !importar;" >  
-                <span id="LogoInnovaTec" style="color:black;" class="logo-text hide-on-med-and-down "><b >Innova</b>Tec</span>  
-                 
-              </a>  
-              <a href="#" class="navbar-toggler"   id="radio" onclick="Materialize.fadeInImage('#sideusuario')" style="margin-left: 70px;padding-top: 5px;">
-                <i class="material-icons"  style="color:black;"   id="radio2">radio_button_checked</i>
-              </a>
-            </h1>  
-          </div>  
-          <ul id="slide-out" class="side-nav fixed leftside-navigation">
+              <div class="brand-sidebar  z-depth-4"   > 
+                <h1 class="logo-wrapper " style="padding-top: 8px; padding-left: 15px; "> 
+                  <a href="http://innovawisp.com" class="brand-logo darken-1 " target="_blank">
+                    <img src="{{asset('images/Isotipo.png')}}" alt="InnovaWifi" style=" height: 43px ;background-image: url('{{asset('images/Isotipo.png')}}') !importar;" >  
+                    <span id="LogoInnovaTec" {{-- style="color:black;" --}} class="logo-text hide-on-med-and-down "><b >Innova</b>Tec</span>  
+                  </a>  
+                  <a href="#" class="navbar-toggler"   id="radio" onclick="Materialize.fadeInImage('#sideusuario')" style="margin-left: 70px;padding-top: 5px;">
+                    <i class="material-icons"  style="color:black;"   id="radio2">radio_button_checked</i>
+                  </a>
+                </h1>  
+              </div> 
+ 
+           
+          
+          <ul id="slide-out" class="  z-depth-3 side-nav fixed leftside-navigation collapsible sidenav-fixed" data-collapsible="menu-accordion">
             <li class="no-padding">
               <ul class="collapsible" data-collapsible="accordion">
                 <li class="hide indigo darken-4 sideusuario" id="" style="height: 100px; padding-top: 10px; margin-bottom: 10px; background: url({{asset('images/fondo-perfil.png')}}); background-size: 270px">
@@ -72,7 +72,7 @@
                       <li>
                         <a href="{{url('/clientes')}}">
                           <i class="material-icons">keyboard_arrow_right</i>
-                          <span> Registro de clientes</span>
+                          <span> Registro de Alumnos</span>
                         </a>
                       </li>
                       <li>
@@ -338,7 +338,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
+          <div class="navigation-background"></div><a href="#" data-activates="slide-out" class=" sidenav-trigger sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
             <i class="material-icons">menu</i> 
           </a>
         </aside>

@@ -134,4 +134,57 @@
               <!-- //////////////////////////////////////////////////////////////////////////// -->
             </div>
             <!--end container-->
+
+<div>
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-4 bg-image-1">
+        <div class="card-content white-text">
+          <span class="card-title font-weight-400 mb-10">Macbook Pro</span>
+          <p>
+            Buy Macbook <br>
+            online Huge selection of Apple
+          </p>
+          <div class="border-non mt-5">
+            <a class="waves-effect waves-light btn red border-round box-shadow">$
+              1,249/-</a>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-4 bg-image-2">
+        <div class="card-content white-text">
+          <span class="card-title font-weight-400 mb-10">iPhone 8</span>
+          <p>
+            Buy iPhone <br>
+            online Huge selection of Apple
+          </p>
+          <div class="border-non mt-5">
+            <a class="waves-effect waves-light btn red border-round box-shadow">$
+              769/-</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="black-overlay">
+        <div class="card bg-image-3">
+          <div class="card-content white-text">
+            <span class="card-title font-weight-400 mb-10">Apple Watch</span>
+            <p>
+              Buy Watch <br>
+              online Huge selection of Apple
+            </p>
+            <div class="border-non mt-5">
+              <a class="waves-effect waves-light btn red border-round box-shadow">$
+                269/-</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
