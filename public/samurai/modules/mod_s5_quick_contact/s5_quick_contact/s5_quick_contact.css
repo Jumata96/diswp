@@ -1,0 +1,27 @@
+.s5_qc_required {
+-moz-box-shadow:0 0px 1000px rgba(244, 213, 216, 1) inset !important;
+-webkit-box-shadow: 0 0px 1000px rgba(244, 213, 216, 1) inset !important;
+box-shadow:0 0px 1000px rgba(244, 213, 216, 1) inset !important;
+}
+#s5_qc_security_img {
+display:block;
+}
+#s5_quick_contact_wrap input, #s5_quick_contact_wrap textarea, #s5_quick_contact_wrap button {
+display:block;
+-webkit-transition: all 300ms ease-in;
+-moz-transition: all 300ms ease-in;
+-o-transition: all 300ms ease-in;
+transition: all 300ms ease-in;
+}
+#s5_quick_contact_wrap span {
+padding:0px;
+margin:0px;
+}
+#s5_quick_contact_wrap {
+width:100%;
+}
+.s5_quick_contact_wrap_box_border input, .s5_quick_contact_wrap_box_border textarea, .s5_quick_contact_wrap_box_border select, .s5_quick_contact_wrap_box_border button {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
