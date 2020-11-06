@@ -16,6 +16,7 @@ Route::get('/','PaginaController@index');
 Route::get('/index', 'PaginaController@index');
 
 Route::get('/index2', 'PageController@index');
+Route::get('/contactanos', 'PageController@contactanos');
 
 //Catalogo de Productos
 /* Route::get('/catalogo', 'PaginaController@catalogo');

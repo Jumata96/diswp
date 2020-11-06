@@ -14,4 +14,9 @@ class PageController extends Controller
     {
         return view('samurai.inicio');
     }
+
+    public function contactanos()
+    {
+        return view('samurai.contactanos');
+    }
 }
