@@ -122,20 +122,19 @@
                                   
                                 </div> 
                           @else
-                          <div class="file-field input-field  ">                                  
-                            <div class="btn light-blue darken-1 ">
-                              <span>SUBIR IMAGEN</span>
-                              <input type="file" id="imagen" name="imagen" >
-                            </div> 
-                            <div class="file-path-wrapper">
-                              <input class="file-path validate" type="text" name="text" id="inputImagen">
-                              <p class="right"><i>Solo se permiten archivos con extensión  
-                                 PNG , DOCX , JPG , PDF y ZIP. </i></p>
-                                 <div id="u_error6" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
-                            </div>
-                          
-                          </div> 
-                              
+                            <div class="file-field input-field  ">                                  
+                              <div class="btn light-blue darken-1 ">
+                                <span>SUBIR IMAGEN</span>
+                                <input type="file" id="imagen" name="imagen" >
+                              </div> 
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" name="text" id="inputImagen">
+                                <p class="right"><i>Solo se permiten archivos con extensión  
+                                  PNG , DOCX , JPG , PDF y ZIP. </i></p>
+                                  <div id="u_error6" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
+                              </div>
+                            
+                            </div>  
                           @endif  
 
                         </div>

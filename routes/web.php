@@ -324,9 +324,8 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/Cursos/eliminar/{id}','CursosController@destroy');
 	Route::get('/Cursos/desabilitar/{id}','CursosController@desabilitar');
 	Route::get('/Cursos/habilitar/{id}','CursosController@habilitar');
-	Route::get('/Curso/{id}','CursosController@showClientes'); 
-
-	Route::get('/CursoI/{id}','CursosController@showClientesVideos');
+	Route::get('/Curso/{id}','CursosController@showClientes');  
+	Route::get('/Curso/videos/{id}','CursosController@showClientesVideos');
 
 
 

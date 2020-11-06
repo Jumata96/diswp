@@ -119,8 +119,8 @@
                                     </div> 
                                     <div class="file-path-wrapper">
                                       <input class="file-path validate" type="text" name="inputVideo" id="inputVideo">
-                                      <p class="right"><i>Solo se permiten archivos con extensión  
-                                         FLK , MP4 ,MKV, AVI. </i></p>
+                                      <p class="right"><i>Solo se permiten archivos con extensión  .rar ,
+                                        .7z , .zip y .zipx </i></p>
                                          <div id="u_error7" style="color: red; font-size: 12px; font-style: italic; padding-left: 3rem;"></div>
                                     </div>
                                   

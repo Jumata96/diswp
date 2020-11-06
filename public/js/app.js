@@ -1750,7 +1750,7 @@ __webpack_require__.r(__webpack_exports__);
     listarVideos: function listarVideos() {
       var me = this;
       console.log(this.postTitle, this.cursoId);
-      axios.get('/diswp/public/CursoI' + '/' + this.cursoId).then(function (response) {
+      axios.get('videos' + '/' + this.cursoId).then(function (response) {
         // handle success
         console.log(response.data);
         me.arrayVideo = response.data;

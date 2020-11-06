@@ -1,15 +1,14 @@
 <script type="text/javascript">
       //---JPaiva-13-08-2018----------------GRABAR-----------------------------
-   
+     /*  CKEDITOR.instances["editor1"].on('change', function() {  
+          $('#horario').val(this.getData())
+      });
+    */
     $('#update').click(function(e){
       e.preventDefault();
-
-      
-      var data = $('#myForm').serializeArray();
-      //data.push({name: 'tienn2t', value: 'love'});
-      //var formData = new FormData();
-      //formData.append('url_imagen', $('#avatarInput')[0].files[0]);
-      console.log(data);
+      $('#horario').val(CKEDITOR.instances["editor1"].getData() ); 
+      var data = $('#myForm').serializeArray(); 
+      console.log(data,CKEDITOR.instances["editor1"].getData() );
       $.ajax({
             url: "{{ url('/contactanos/actualizar') }}",
             type:"POST",
@@ -24,9 +23,7 @@
            url:"{{ url('/contactanos/actualizar') }}",
            data:data,
 
-           success:function(data){              
-
-              console.log(data);
+           success:function(data){      
               if ( data[0] == "error") {
                 
                 ( typeof data.descripcion != "undefined" )? $('#error3').text(data.descripcion) : null;

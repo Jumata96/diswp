@@ -41,23 +41,7 @@
                                                           <img class="z-depth-1" src="{{asset('/images/user-profile-bg.jpg')}}" alt="" style="height: 300px; width: 100%">
                                                           
                                                         </div>                                                         
-                                                      </div>                                                    
-                                                      
-                                                      {{-- <div class=" col s12">
-                                                        <label for="u_imagen" class="col s12" style="padding-left: 5px; padding-bottom: 5px">Seleccionar tipo</label>
-                                                        <div class="col s12 m6 l6">
-                                                          <p>
-                                                            <input class="with-gap" name="group1" type="radio" id="test3" value="0">
-                                                            <label for="test3">Imágen</label>
-                                                          </p>                                                          
-                                                        </div>                                                        
-                                                        <div class="col s12 m6 l6">
-                                                          <p>
-                                                            <input class="with-gap" name="group1" type="radio" id="test4" value="1">
-                                                            <label for="test4">Video</label>
-                                                          </p>
-                                                        </div>                                                           
-                                                      </div> --}}                                                       
+                                                      </div>                                                               
                                                       <div class="file-field input-field col s12" id="bbb">
                                                           <div class="btn">
                                                               <span>File</span>

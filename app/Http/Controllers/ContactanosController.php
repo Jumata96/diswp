@@ -32,7 +32,7 @@ class ContactanosController extends Controller
 
         $contactanos = DB::table('contactanos')->get();
         $dcontactanos = DB::table('dcontactanos')->get();
-        //dd($carrusel);
+        // dd($contactanos);
 
         return view('forms.contactanos.mntContactanos', [
             'contactanos'	=> $contactanos,
@@ -43,7 +43,7 @@ class ContactanosController extends Controller
 
     public function update(Request $request)
     {    	
-    	//dd($request);
+    	// dd($request);
          $rules = array(      
 
         );
@@ -60,7 +60,9 @@ class ContactanosController extends Controller
             DB::table('contactanos')            
             ->where('id',$request->id)
             ->update([
-            	'titulo'			=> $request->titulo,
+                'titulo'			=> $request->titulo,
+                'email'             => $request->correo,
+                'horario'           => $request->horario,
             	'descripcion'       => $request->descripcion,
                 'ubicacion'	        => $request->ubicacion,
                 'link_facebook'     => $request->link_facebook,

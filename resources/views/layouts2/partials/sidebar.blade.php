@@ -134,27 +134,28 @@
                     <ul>
                       <li><a href="{{ url('#') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
-                        <span>página nosotros</span>
-                      </a>
+                        <span>página de Inicio</span></a>
                       </li> 
-                      <li><a href="{{ url('#') }}">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                        <span>página de Servicios</span>
-                      </a>
-                      </li> 
+                      
                       <li><a href="{{ url('#') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
                         <span>página de Galería</span>
+                        </a> 
+                      </li>                      
+                      <li><a href="{{ url('#') }}">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>página de nosotros</span>
                       </a>
                       </li> 
                       <li><a href="{{ url('#') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
-                        <span>página de Inicio</span></a>
-                      </li> {{-- 
-                      <li><a href="{{ url('#') }}">
+                        <span>página de teams</span>
+                      </a>
+                      </li> 
+                      <li><a href="{{ url('/mntContactanos') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
-                        <span>Parámetros</span></a>
-                      </li>  --}} 
+                        <span> página de Contactanos</span></a>
+                      </li>   
                     </ul>
                   </div>
                 </li>
