@@ -1,0 +1,238 @@
+#s5_masondisplay_container .item { width: 351px; }
+#s5_masondisplay_container .item.w2 { width: 50%; }
+.s5_masonry_articles li {
+	float: left;
+	list-style: outside none none;
+	margin: 0 12px;}
+	
+.s5_masonry_articles {
+	padding: 0;}
+
+.s5_mason_loadbutton{
+	margin:40px 25px 23px;
+	text-align:center;}
+
+.s5masonmod_form {
+	padding-bottom:60px;}
+	
+.s5_masonry_articletitle {
+	margin-bottom: 12px;
+	font-size:1.2em;}
+
+#s5_mason_load_more {
+	cursor:pointer;}
+		
+.newswrap {
+	width:300px;
+	float:left;
+	margin-bottom:10px;}
+
+.s5_masonwrapinner {
+	background:#ffffff;
+	border:1px solid #efefef;
+	margin-right: 10px;
+	margin-left: 10px;
+    margin-top: 20px;
+	padding:0px;}
+	
+	.s5_mason_it_wrap {
+		font-size:1em;}
+	
+.s5_mason_hits_wrap {
+	font-size:0.8em;
+	color:#b5b5b5;
+	margin-top: 13px;}
+	
+	
+#s5_masondisplay_container {
+	margin-left: 10px;
+	margin-right: 10px;}
+
+#s5_masonry_navwrap {
+overflow:hidden;
+}
+
+ul.s5_masonry_articles {
+	float: left;
+    left: 50%;
+    margin: auto !important;
+    position: relative;
+    width: auto !important;
+	padding-bottom: 32px;
+    padding-top: 32px;}
+	
+ul.s5_masonry_articles li {
+    float: left;
+    position: relative;
+    right: 50%;}	
+
+.s5_mason_abi_wrap{
+	padding:30px;}
+	
+.s5masonrymod {
+	font-size:0.9em;}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+#s5_loading_inner {
+	background: url(../images/loding.gif) no-repeat scroll center center;
+    display: block;
+    height:32px;
+	margin-top:40px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+	margin-bottom:50px;}
+
+#s5_masondisplay_container .newswrap{
+	 opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 15360px){
+#s5_masondisplay_container .item {
+width:11.11%;
+}
+}
+
+
+@media screen and (max-width: 7680px){
+#s5_masondisplay_container .item {
+width:12.5%;
+}
+}
+
+
+@media screen and (max-width: 3840px){
+#s5_masondisplay_container .item {
+width:14.28%;
+}
+}
+
+
+@media screen and (max-width: 1920px){
+#s5_masondisplay_container .item {
+width:16.66%;
+}
+}
+
+@media screen and (max-width: 1600px){
+#s5_masondisplay_container .item {
+width:20%;
+}
+}
+
+@media screen and (max-width: 1280px){
+#s5_masondisplay_container .item {
+width:25%;
+}
+}
+
+@media screen and (max-width: 1000px){
+#s5_masondisplay_container .item {
+width:33.33%;
+}
+}
+
+@media screen and (max-width: 750px){
+#s5_masondisplay_container .item {
+width:50%;
+}
+}
+
+@media screen and (max-width: 620px){
+#s5_masondisplay_container .item {
+width: 100%;
+}
+}
+
+.s5_masonwrapinner {
+    overflow: hidden;
+    position: relative;
+}
+
+.s5_masonry_hover .item .s5_mason_abi_wrap {
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    height: 100%;
+    left: 0;
+    line-height: 22px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+	padding:0px;
+    transform: translate(0px, -50%) scale(0.7);
+    width: 100%;
+	-webkit-transition:  all 200ms ease-in;
+	-moz-transition:  all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition:  all 200ms ease-in;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.s5_masonry_hover .item:hover .s5_mason_abi_wrap {
+    opacity: 1;
+    top: 0;
+    transform: scale(1);
+}
+
+.s5_masonry_hover .item .s5_mason_abi_wrap h4 {
+	color:#FFFFFF;
+}
+
+.s5_masonry_hover .item .s5_mason_abi_wrap_inner {
+	transform: translate(0px, -50%);
+	top: 50%;
+	position:absolute;
+	left:0;
+	padding:30px;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition:  all 200ms ease-in;
+	-moz-transition:  all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition:  all 200ms ease-in;
+	transition-delay:200ms;
+	-webkit-transition-delay:200ms; 
+	-moz-transition-delay:200ms; 
+	-o-transition-delay:200ms; 
+	margin-top:10px;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+	
+.s5_masonry_hover .item:hover .s5_mason_abi_wrap_inner {
+	margin-top:0px;
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}

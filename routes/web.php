@@ -14,6 +14,10 @@
 //Ruta para acceder a la Pagina Web
 Route::get('/','PaginaController@index');
 Route::get('/index', 'PaginaController@index');
+
+Route::get('/index2', 'PageController@index');
+Route::get('/contactanos', 'PageController@contactanos');
+
 //Catalogo de Productos
 /* Route::get('/catalogo', 'PaginaController@catalogo');
 Route::get('/catalogo/{id}', 'PaginaController@catalogoLinea');
