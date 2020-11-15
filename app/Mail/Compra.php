@@ -31,6 +31,6 @@ class EmailSend extends Mailable
     {
         $this->subject($this->subject)                
             ->markdown('mails.sendMessage');
-            return view('mails.index')
+            return view('mails.index');
     }
 }

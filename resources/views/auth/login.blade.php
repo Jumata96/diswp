@@ -100,7 +100,7 @@
             </button>
           </div>
         </div>
-        <div class="row">
+       {{--  <div class="row">
           <div class="input-field col s5 m5 l5">
             @foreach($parametros as $val)
             @if($val->parametro == 'REGISTRO_MANUAL' && $val->valor == 'SI')
@@ -111,7 +111,7 @@
           <div class="input-field col s7 m7 l7">
               <p class="margin right-align medium-small"><a href="#">Olvidaste tu contraseña?</a></p>
           </div>                
-        </div>
+        </div> --}}
 
       </form>
   </div>

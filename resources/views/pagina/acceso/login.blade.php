@@ -56,7 +56,7 @@
     <div class="card-panel" id="pagina-login" style="width: 26rem; padding: 0">
       <div class="card-header center white-text"; style="border-bottom: 1px solid red; background-color: #0091ea; height: 60px; padding-top: 8px">
         <span class="logo-text sideusuario" style="padding-left: 0px; font-size: 32px">
-            <b style="color: #fafafa; font-style: normal;">ARDINITRADING</b>
+            <b style="color: #fafafa; font-style: normal;">DISWP</b>
         </span>                             
       </div>
       

@@ -1,7 +1,8 @@
 <head>
     <meta charset="UTF-8">
-    <title> ardiniTrading - @yield('titulo', 'Inicio') </title>
+    <title> Diswp - @yield('titulo', 'Inicio') </title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +11,8 @@
     <meta name="description" content="InnovaMk es un sistema de gestión basado en la API de mikrotik.">
     <meta name="keywords" content="mikrotik, sistema mikrotik, mikrotik sistema, ubiquiti, mikrtoik ubiquiti,">
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    {{-- <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32"> --}}
+    <link rel="icon" href="{{asset('images/icon/samurai.png') }}" sizes="32x32"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">

@@ -11,41 +11,16 @@ use Image;
 
 class CarruselController extends Controller
 {
-    public function index()
-    {    
-    	$valida = 0;
-
-        //-- Validación para mostrar mensajes al realizar un CRUD
-        $validacion = DB::table('validacion')
-                        ->select('valor')
-                        ->where('idusuario',Auth::user()->id)->get();
-
-        foreach ($validacion as $val) {
-            $valida = $val->valor;
-        }
-        if ($valida > 0) {
-            DB::table('validacion')
-            ->where('idusuario',strval(Auth::user()->id))
-            ->update(['valor' => 0]);
-        }
-
-        $carrusel = DB::table('carrusel')->get();
-        //dd($carrusel);
-
-        return view('forms.inicio.lstCarrusel', [
-            'carrusel'	=> $carrusel,
-            'valida'	=> $valida
-		]);
-    }
+    
 
     public function create()
     {
-       return view('forms.inicio.addCarrusel');
+       return view('forms.inicio.carrusel.addCarrusel');
     }
 
     public function store(Request $request)
     {
-    	//dd($request);
+    	// dd($request);
     	$idusu = Auth::user()->id;
         $validacion = DB::table('validacion')->where('idusuario',$idusu)->get();
     	$principal = 0;
@@ -60,9 +35,8 @@ class CarruselController extends Controller
 	    $fileName = $file->getClientOriginalName();
 	    $path = public_path('images/carrusel/'.$fileName);
 	    //dd( $fileName);
-	    Image::make($file)->save($path);
-
-
+        Image::make($file)->save($path); 
+        
         DB::table('carrusel')
         ->insert([            
             'estado'            => 1,
@@ -94,9 +68,7 @@ class CarruselController extends Controller
             
         }  
 
-        $carrusel = DB::table('carrusel')->where('imagen',$fileName)->get();
-
-        
+        $carrusel = DB::table('carrusel')->where('imagen',$fileName)->get(); 
         $data['success'] = $carrusel;
 	    $data['path'] = 'images/carrusel/'.$fileName . '?' . uniqid();
 
@@ -105,7 +77,7 @@ class CarruselController extends Controller
 
     public function update(Request $request)
     {
-    	//dd($request);
+    	// dd($request);
     	$idusu = Auth::user()->id;
         $validacion = DB::table('validacion')->where('idusuario',$idusu)->get();
     	$principal = 0;
@@ -180,49 +152,45 @@ class CarruselController extends Controller
 	    return $data;
     }
 
-    public function destroy(Request $request)
-    {
-    	//dd($request->id);
-        DB::table('carrusel')
-            ->where('id',$request->id)->delete();
-
-        return response()->json();
-    }
+    
 
     public function show($id)
     {
         $carrusel = DB::table('carrusel')
                     ->where('id',$id)->get();
 
-        return view('forms.inicio.updCarrusel',['carrusel' => $carrusel]);
+        return view('forms.inicio.carrusel.updCarrusel',['carrusel' => $carrusel]);
     }
 
-    public function disabled(Request $request)
+    public function disabled($id)
     {
         DB::table('carrusel')
-            ->where('id',$request->id)
+            ->where('id',$id)
             ->update([
                 'estado'    => 0
             ]);
 
-        $carrusel = DB::table('carrusel')->where('id',$request->id)->get();
-        $collection = Collection::make($carrusel);
-                
-        return response()->json($collection->toJson());   
+             
+        return redirect('/inicio');   
     }
 
-    public function habilitar(Request $request)
+    public function habilitar($id)
     {
         DB::table('carrusel')
-            ->where('id',$request->id)
+            ->where('id',$id)
             ->update([
                 'estado'    => 1
-            ]);
+            ]); 
+        return redirect('/inicio');   
+    }
+    public function destroy($id)
+    {
+    	//dd($request->id);
+        DB::table('carrusel')
+            ->where('id', $id)->delete();
 
-        $carrusel = DB::table('carrusel')->where('id',$request->id)->get();
-        $collection = Collection::make($carrusel);
-                
-        return response()->json($collection->toJson());   
+        return response()->json();
+        return redirect('/inicio');
     }
 
 }

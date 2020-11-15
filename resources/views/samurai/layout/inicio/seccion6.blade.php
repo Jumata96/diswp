@@ -1,64 +1,26 @@
- <!-- Bottom Row2 -->	
- <!-- End Bottom Row2 -->
- <!-- Bottom Row3 -->	
- <section id="s5_bottom_row3_area1" class="s5_slidesection s5_yes_custom_bg">
-    <div id="s5_bottom_row3_area2" class="s5_no_custom_bg">
-       <div id="s5_bottom_row3_area_inner" class="s5_wrap">
-          <div id="s5_bottom_row3_wrap">
-             <div id="s5_bottom_row3">
-                <div id="s5_bottom_row3_inner">
-                   <div id="s5_pos_custom_7">
-                      <div id="s5_pos_custom_7_inner" class="s5_wrap">
-                         <div class="module_round_box_outer">
-                            <div class="module_round_box">
-                               <div class="s5_module_box_1">
-                                  <div class="s5_module_box_2">
-                                     <div class="s5_outer">
-                                        <div class="custom"  >
-                                           <h3 class="large_h3" style="text-align:center;display:block;">Contact Us Today</h3>
-                                        </div>
-                                     </div>
-                                     <div style="clear:both; height:0px"></div>
-                                  </div>
-                               </div>
-                            </div>
-                         </div>
-                         <div style="clear:both; height:0px"></div>
-                      </div>
-                   </div>
-                   <div id="s5_pos_bottom_row3_1" class="s5_float_left" style="width:43%">
+<!-- Bottom Row1 -->	
+@foreach ($inicio_seccion as $seccion6) 
+@if( $seccion6->codigo=='SEC6')  
+<section id="s5_bottom_row1_area1" class="s5_slidesection s5_no_custom_bg"> 
+    <div id="s5_bottom_row1_area2" class="s5_no_custom_bg">
+       <div id="s5_bottom_row1_area_inner" class="s5_wrap">
+          <div id="s5_bottom_row1_wrap">
+             <div id="s5_bottom_row1">
+                <div id="s5_bottom_row1_inner">
+                   <div id="s5_pos_bottom_row1_1" class="s5_float_left" style="width:100%">
                       <div class="module_round_box_outer">
-                         <div class="module_round_box">
+                         <div class="module_round_box-centered_large">
                             <div class="s5_module_box_1">
                                <div class="s5_module_box_2">
-                                  <div class="s5_outer">
-                                     <div class="custom"  >
-                                        <ul class="bottom_info">
-                                           <li>
-                                              <h3>Operating Hours:</h3>
-                                              Monday to Friday 9am to 9pm<br />
-                                              Saturdays 8am to 10pm<br />
-                                              Sunday 11am to 7pm
-                                           </li>
-                                           <li>
-                                              <h3>Address:</h3>
-                                              1200 Moyer Road<br />
-                                              Bigtownville, CO 52001<br />
-                                              USA
-                                           </li>
-                                           <li>
-                                              <h3>Telephone:</h3>
-                                              1-800-555-1212
-                                           </li>
-                                           <li>
-                                              <h3>Fax:</h3>
-                                              1-800-555-1212
-                                           </li>
-                                           <li>
-                                              <h3>Email:</h3>
-                                              info@mydomain.com
-                                           </li>
-                                        </ul>
+                                  <div class="s5_mod_h3_outer">
+                                     <h3 class="s5_mod_h3">
+                                       <span class="s5_h3_last"> {{ $seccion6->titulo}}</span>
+                                     </h3>
+                                  </div>
+                                  <div class="s5_mod_h3_below" style="clear:both"></div>
+                                  <div class="s5_outer-centered_large">
+                                     <div class="custom-centered_large"  >
+                                         {{ $seccion6->descripcion}}
                                      </div>
                                   </div>
                                   <div style="clear:both; height:0px"></div>
@@ -66,88 +28,208 @@
                             </div>
                          </div>
                       </div>
-                   </div>
-                   <div id="s5_pos_bottom_row3_2" class="s5_float_left" style="width:57%">
                       <div class="module_round_box_outer">
                          <div class="module_round_box">
                             <div class="s5_module_box_1">
                                <div class="s5_module_box_2">
                                   <div class="s5_outer">
-                                     <div id="s5_quick_contact_wrap">
-                                        <form name="s5_quick_contact" method="post" id="s5_quick_contact">		
-                                           <span class="s5_qc_name_wrap" id="s5_qc_namebox_span">
-                                           <input class="inputbox" id="s5_qc_namebox" onfocus="s5_qc_clear_inputs(this.id)" onblur="s5_qc_clear_inputs(this.id)" style="height:auto;width:100%;padding:12px;margin:;text-transform:none !important;" type="text" value="Name..." name="s5_qc_name" />		
-                                           </span>
-                                           <span class="s5_qc_email_wrap" id="s5_qc_emailbox_span">
-                                           <input class="inputbox" id="s5_qc_emailbox" onfocus="s5_qc_clear_inputs(this.id)" onblur="s5_qc_clear_inputs(this.id)" style="height:auto;width:100%;padding:12px;margin:;text-transform:none !important;" type="text" value="Email..." name="s5_qc_email" />		
-                                           </span>
-                                           <span id="s5_qc_subjectbox_span" class="s5_qc_subject_wrap">		
-                                           <input class="inputbox" id="s5_qc_subjectbox" onfocus="s5_qc_clear_inputs(this.id)" onblur="s5_qc_clear_inputs(this.id)" style="height:auto;width:100%;padding:12px;margin:;text-transform:none !important;" type="text" value="Subject..." name="s5_qc_subject" />
-                                           </span>	
-                                           <span id="s5_qc_field1box_span" class="s5_qc_textarea_required">
-                                           <textarea id="s5_qc_field1box" class="inputbox textarea" onfocus="s5_qc_clear_inputs(this.id)" onblur="s5_qc_clear_inputs(this.id)" style="overflow:auto;width:100%;padding:12px;margin:;height:162px;text-transform:none !important;" name="s5_qc_field1">Message...</textarea>			
-                                           </span>				
-                                           <input id="returnurl" type="hidden" value="http://www.shape5.com/demo/fitness_center/index.php" name="returnurl" />	
-                                           <span class="s5_qc_button_wrap">	
-                                           <button class="button btn" type="button" style="margin:" id="s5_qc_submitbutton" onclick="s5_qc_submit()">Send Message</button>	
-                                           </span>
-                                        </form>
-                                        <div style="clear:both;height:0px;"></div>
+                                     <div id="s5_masonry_navwrap">
+                                        <ul class="s5_masonry_articles" id="s5_masonry_articles">
+                                           <li class="s5_masonry_active">
+                                              <a onclick="CatArticle('0');s5_mason_active_class(this)" href="javascript:void(0);" >All</a>
+                                           </li>
+                                           <li class="s5_masonry_inactive">
+                                              <a onclick="CatArticle('35');s5_mason_active_class(this)" href="javascript:void(0);" >Aerobics</a>
+                                           </li>
+                                           <li class="s5_masonry_inactive">
+                                              <a onclick="CatArticle('37');s5_mason_active_class(this)" href="javascript:void(0);" >Strength</a>
+                                           </li>
+                                           <li class="s5_masonry_inactive">
+                                              <a onclick="CatArticle('38');s5_mason_active_class(this)" href="javascript:void(0);" >Nutrition</a>
+                                           </li>
+                                        </ul>
+                                        <div style="clear:both"></div>
                                      </div>
-                                     <script type="text/javascript">
-                                        function s5_qc_isValidEmail(str_email) {
-                                            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str_email)) {
-                                                alert('Your email is now being submitted - Thank you!');   document.s5_quick_contact.submit();   
-                                            } else {   
-                                                alert('Your email address is not valid, please check again - Thank you!');   
-                                                document.getElementById("s5_qc_emailbox").className = "inputbox s5_qc_required";   
+                                     <form method="post" name="s5masonmod" class="s5masonmod_form" id="s5masonmod746">
+                                        <div id="s5_masondisplay_container" class="s5_masonry_hover js-masonry ajaxdiv"   data-masonry-options='{ "columnWidth": 0, "itemSelector": ".item" }'>
+                                           @foreach ($inicio_seccion_det as $seccion_det6) 
+                                             @if ($seccion_det6->id_seccion == $seccion6->codigo )
+                                             <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('/storage/'.$seccion_det6->url_file)}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/37-strength/115-strength-training.html"> 
+                                                             {{$seccion_det6->titulo}}</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          {{$seccion_det6->descripcion}}
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                                
+                                             @endif 
+                                           @endforeach
+                                           
+                                           {{-- <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('samurai/images/article5.jpg')}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/35-aerobics/114-track-conditioning.html">
+                                                          Track Conditioning</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          Lorem ipsum dolor sit amet, consecte tur adipiscing elit In suscipit. 
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                           <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('samurai/images/article4.jpg')}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/37-strength/113-muscle-workout.html">
+                                                          Muscle Workout</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          Lorem ipsum dolor sit amet, consecte tur adipiscing elit In suscipit. 
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                           <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('samurai/images/article3.jpg')}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/35-aerobics/112-pilates-workouts.html">
+                                                          Pilates Workouts</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          Lorem ipsum dolor sit amet, consecte tur adipiscing elit In suscipit. 
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                           <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('samurai/images/article2.jpg')}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/38-nutrition/111-feel-healthy.html">
+                                                          Feel Healthy</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          Lorem ipsum dolor sit amet, consecte tur adipiscing elit In suscipit. 
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                           <div class="item">
+                                              <div class="s5_masonwrapinner">
+                                                 <img alt="" src="{{asset('samurai/images/article1.jpg')}}" />
+                                                 <div class="s5_mason_abi_wrap">
+                                                    <div class="s5_mason_abi_wrap_inner">
+                                                       <h4 class="s5_masonry_articletitle ">
+                                                          <a href="index.php/masonry/38-nutrition/110-healthy-living.html">
+                                                          Healthy Living</a>
+                                                       </h4>
+                                                       <div class="s5_mason_it_wrap">
+                                                          Lorem ipsum dolor sit amet, consecte tur adipiscing elit In suscipit. . 
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </div>
+                                           </div> --}}
+                                           <script type="text/javascript">
+                                              jQuery(document).ready(function() {
+                                                  Total = '7';
+                                                  limitstart = "";
+                                                  if(parseInt(limitstart) >= parseInt(Total)){
+                                              jQuery('#s5_loadmoreId').css('display', 'none');
+                                              document.getElementById('scrool').value = 1;
+                                              }else{
+                                              jQuery('#s5_loadmoreId').css('display', 'block');
+                                              document.getElementById('scrool').value = 0;
+                                              }
+                                              });
+                                              var s5_masondisplay_container = document.querySelector('#s5_masondisplay_container');
+                                              
+                                              jQuery('img',s5_masondisplay_container).each(function(i,d){
+                                                    jQuery(d).load(function(){
+                                                        var msnry = new Masonry( s5_masondisplay_container, {
+                                                      // options
+                                                      columnWidth: 0,
+                                                      itemSelector: '.item'
+                                                        });
+                                                    });
+                                              });
+                                              
+                                           </script>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                        <div id="s5_masonload_wrap"></div>
+                                        <input type="hidden" name="count" id="count" value="6">
+                                        <input type="hidden" name="catid" id="catid" value="0">
+                                        <input type="hidden" name="scrool" id="scrool" value="0">
+                                        <input type="hidden" name="limitstart" id="limitstart" value="3">
+                                        <div class="s5_mason_loadbutton" id="s5_loadmoreId">
+                                           <button type="button" id="s5_mason_load_more" class="button" name="s5_mason_load_more" onclick="News_ajaxloadmore();">Load More</button>
+                                        </div>
+                                     </form>
+                                     <script>
+                                        function News_ajaxloadmore(){
+                                            cat = document.getElementById('catid').value;
+                                            var defaultlimit = '3';
+                                            var firstlimit = '6';
+                                            if(document.getElementById('limitstart').value == defaultlimit){
+                                                var limitstart 	 = parseInt(document.getElementById('limitstart').value) + parseInt(firstlimit) ;
+                                            }else{
+                                                var limitstart 	 = parseInt(document.getElementById('limitstart').value) + parseInt(defaultlimit) ;
                                             }
+                                            document.getElementById('limitstart').value = limitstart;
+                                            var ajaxurl = 'indexbd6c.html?ajaxload=true';
+                                            jQuery('#s5_masonload_wrap').append('<div id="s5_masonload_loading"></div>');
+                                            jQuery('#s5_masonload_loading').html('<div id="s5_loading_inner"></div>');
+                                            jQuery.ajax({
+                                                url: ajaxurl+"&limitstart="+limitstart+"&catid="+cat+"&count="+firstlimit+"&loadmore="+defaultlimit,
+                                                success: function(data) {
+                                                    jQuery('#s5_masonload_loading').remove();
+                                        
+                                                     jQuery( ".ajaxdiv").html(data );
+                                                 }
+                                             });
                                         }
-                                                var s5_qc_subject_type = "user";
-                                        var s5_qc_spambox_text = "Enter The Code...";
-                                        var s5_qc_subject_text = "Subject...";
-                                        var s5_qc_name_text = "Name...";
-                                        var s5_qc_email_text = "Email...";
-                                        var s5_qc_field1_text = "Message...";
-                                        var s5_qc_field2_text = "Field 2...";
-                                        var s5_qc_field3_text = "Field 3...";
-                                        var s5_qc_field4_text = "Field 4...";
-                                        var s5_qc_field5_text = "Field 5...";
-                                        var s5_qc_field6_text = "Field 6...";
-                                        var s5_qc_field7_text = "Field 7...";
-                                        var s5_qc_field8_text = "Field 8...";
-                                        var s5_qc_field9_text = "Field 9...";
-                                        var s5_qc_field10_text = "Field 10...";
-                                        function s5_qc_clear_inputs(s5_qc_click_id) {	
-                                            s5_qc_clear_inputs_values(s5_qc_click_id);
+                                     </script>
+                                     <script>
+                                        function CatArticle(cat){
+                                            document.getElementById('catid').value = cat;
+                                            var limitstart = '6';
+                                            document.getElementById('limitstart').value = limitstart;
+                                            var ajaxurl = 'indexbd6c.html?ajaxload=true';
+                                            jQuery('#s5_masonload_wrap').append('<div id="s5_masonload_loading"></div>');
+                                            jQuery('#s5_masonload_loading').html('<div id="s5_loading_inner"></div>');
+                                            jQuery.ajax({
+                                                url: ajaxurl+"&limitstart="+limitstart+"&catid="+cat+"&count="+limitstart,
+                                                success: function(data) {
+                                                    jQuery('#s5_masonload_loading').remove();
+                                                    jQuery( ".ajaxdiv").html(data );
+                                                    }
+                                             });
                                         }
-                                        var s5_qc_field1_type = "textarea_required";
-                                        var s5_qc_field2_type = "1";
-                                        var s5_qc_field3_type = "1";
-                                        var s5_qc_field4_type = "1";
-                                        var s5_qc_field5_type = "1";
-                                        var s5_qc_field6_type = "1";
-                                        var s5_qc_field7_type = "1";
-                                        var s5_qc_field8_type = "1";
-                                        var s5_qc_field9_type = "1";
-                                        var s5_qc_field10_type = "1";
-                                        var s5_qc_required_missing = "no";
-                                        var s5_qc_all_content = "";
-                                        function s5_qc_submit() {
-                                            s5_qc_check_required();	if (s5_qc_required_missing == "yes") {		alert('The fields indicated in red are required, please complete the form - Thank you!');		return false;	}	s5_qc_find_all_values();	if (s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0 || s5_qc_all_content.indexOf("s5_qc_null") >= 0) {
-                                                return false;
-                                            }
-                                            else {
-                                                var email_str = document.getElementById("s5_qc_emailbox").value;
-                                                s5_qc_isValidEmail(email_str);
-                                            }
-                                        }
-                                        function s5_qc_load_pikaday() {
-                                                                                                                        }
-                                        function s5_qc_load_pikaday_timer() {
-                                        window.setTimeout(s5_qc_load_pikaday,500);
-                                        }
-                                        window.onload = s5_qc_load_pikaday_timer();
                                      </script>
                                   </div>
                                   <div style="clear:both; height:0px"></div>
@@ -162,5 +244,7 @@
           </div>
        </div>
     </div>
- </section>
- <!-- End Bottom Row3 -->
+</section>
+ <!-- End Bottom Row1 -->	
+ @endif   
+@endforeach

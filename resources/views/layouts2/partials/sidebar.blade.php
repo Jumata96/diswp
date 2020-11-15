@@ -132,7 +132,7 @@
                   </a>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="{{ url('#') }}">
+                      <li><a href="{{ url('/inicio') }}">
                         <i class="material-icons">keyboard_arrow_right</i>
                         <span>página de Inicio</span></a>
                       </li> 
@@ -158,6 +158,12 @@
                       </li>   
                     </ul>
                   </div>
+                </li>
+                <li class="bold">
+                  <a class=" waves-effect waves-cyan" href="{{ url('/mails') }}">
+                    <i class="material-icons">email</i>
+                    <span class="nav-text">Mensajes</span>
+                  </a>                  
                 </li>
                 {{-- <li class="bold">
                   <a class="collapsible-header waves-effect waves-cyan">

@@ -13,7 +13,7 @@ class GeneralController extends Controller
 {
     public function index()
     {    
-    	$valida = 0;
+    	/* $valida = 0;
 
         //-- Validación para mostrar mensajes al realizar un CRUD
         $validacion = DB::table('validacion')
@@ -37,7 +37,7 @@ class GeneralController extends Controller
             'general'	=> $general,
             'dgeneral'	=> $dgeneral,
             'valida'	=> $valida
-		]);
+		]); */
     }
 
     public function update(Request $request)

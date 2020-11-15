@@ -18,32 +18,60 @@ class MailController extends Controller
 
     public function obtenerMensajes()
     {  
-            $msjs = DB::table('msj_compra as msj')
+            /* $msjs = DB::table('msj_compra as msj')
             ->select('msj.id','msj.fecha','msj.visto','c.idcarrito', 'cle.nombre','cle.apellidos')
             ->join('carrito as c','c.idcarrito','=','msj.idcarrito') 
             ->join('users as cle','cle.id','=','c.idcliente')       
             ->orderBy('msj.fecha', 'desc')        
             ->get();
-
+           
             $cont = DB::table('msj_compra as msj')
             ->select('msj.fecha','msj.visto','c.idcarrito', 'cle.nombre')
             ->join('carrito as c','c.idcarrito','=','msj.idcarrito') 
             ->join('users as cle','cle.id','=','c.idcliente')
             ->where('visto','0')         
-            ->count();                       
-    
+            ->count();    */ 
+         /* $msjs = DB::table('mensaje as msj')->orderBy('msj.fecha', 'desc')->where('visto','0') ->get();  */   
+          /*   $cont = DB::table('mensaje as msj')->orderBy('msj.fecha', 'desc')->where('visto','0') ->count ();*/
+
+           $msjs = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')   
+            ->where([
+                ['entrante',1],
+                ['visto',0]
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->get();
+            $cont = $msjs->count();    
         return ['mensajes' => $msjs, 'contador' => $cont];
     }
 
     public function obtenerMensajesSalida()
     {  
             $msjs = DB::table('mensaje')
-            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')        
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')  
+            ->where('saliente',1)      
             ->orderBy('fecha', 'desc')        
             ->get();
 
             $cont = $msjs->count();              
     
+        return ['mensajes' => $msjs, 'contador' => $cont];
+    }
+    public function obtenerMensajesHistorial()
+    {  
+            
+           $msjs = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')   
+            ->where([
+                ['entrante',1],
+                ['visto',1]
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->get();
+
+            $cont = $msjs->count();              
+     
         return ['mensajes' => $msjs, 'contador' => $cont];
     }
 
@@ -59,17 +87,7 @@ class MailController extends Controller
     
         return ['mensajes' => $msjs, 'contador' => $cont];
     }
-
-    public function detalleNuevoUsuario(Request $request, $id)
-    {
-         $nvo_user = DB::table('msj_compra as m')
-            ->select('m.id','m.fecha','m.visto', 'u.nombre', 'u.apellidos', 'u.usuario', 'u.email')           
-            ->join('users as u','u.email','=','m.user_email')       
-            ->where('u.email',$id)        
-            ->get()
-            ->first();
-            return (['detalle_usuario' => $nvo_user]);
-    }
+ 
 
 
 
@@ -85,12 +103,19 @@ class MailController extends Controller
 
 
 
-    public function visto(Request $request, $id)
+    public function visto($id)
     { 
-           DB::table('msj_compra')
+         
+           DB::table('mensaje')
             ->where('id',$id)
             ->update(['visto' => 1]);
-            return;
+
+          $msj_salida = DB::table('mensaje')
+            ->select('enviado_por','email_destino','asunto','mensaje', 'fecha')
+            ->where('id',$id)      
+            ->get()
+            ->first();
+            return (['detalle_salida' => $msj_salida]);
     }
 
     public function detalle(Request $request, $id){
@@ -125,6 +150,7 @@ class MailController extends Controller
                     'email_destino'  => $to,
                     'asunto'         => $subject,
                     'mensaje'        => $message,
+                    'saliente'       =>1,
                     'fecha'          => date('Y-m-d H:m:s')
                 ]);
 

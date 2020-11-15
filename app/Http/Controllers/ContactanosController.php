@@ -43,7 +43,7 @@ class ContactanosController extends Controller
 
     public function update(Request $request)
     {    	
-    	// dd($request);
+    	//  dd($request);
          $rules = array(      
 
         );
@@ -57,14 +57,19 @@ class ContactanosController extends Controller
             return response()->json($var);
         }          
         else {
+                $request->session()->flash('latitud' );
+                $request->session()->flash('longitud' );
+                $request->session()->flash('direccion' );  
             DB::table('contactanos')            
             ->where('id',$request->id)
             ->update([
                 'titulo'			=> $request->titulo,
                 'email'             => $request->correo,
                 'horario'           => $request->horario,
-            	'descripcion'       => $request->descripcion,
-                'ubicacion'	        => $request->ubicacion,
+                'latitud'     => $request->latitudC,
+                'longitud'     => $request->longitudC,
+                'ubicacion'	        => $request->direccion,
+            	'descripcion'       => $request->descripcion, 
                 'link_facebook'     => $request->link_facebook,
                 'link_twitter'      => $request->link_twitter,
                 'link_youtube'      => $request->link_youtube,
