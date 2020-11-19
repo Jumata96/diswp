@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'InnovaTec\Events\Event' => [
             'InnovaTec\Listeners\EventListener',
         ],
+        'InnovaTec\Events\MessageStatusChangedEvent' => [
+            'InnovaTec\Listeners\MessageStatusListener',
+        ],
     ];
 
     /**

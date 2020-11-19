@@ -32,7 +32,7 @@
                     <input type="hidden" name="id" value="{{ $curso->codigo }}" >  
                     <div><center><h3>{{ strtoupper($curso->nombre) }}</h3></center></div>
                     <videosn   curso-id="{{ $curso->codigo }}"></videosn> 
-                   </div>
+                   </div> 
   
                    
 

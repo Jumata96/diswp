@@ -1,4 +1,7 @@
 <?php
+ 
+use InnovaTec\Events\MessageStatusChangedEvent; 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,7 +13,28 @@
 |
 */
 //Ruta para acceder a la Pagina Web
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index'); 
+
+Route::get('/fire2', function () {
+
+    $msjs = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')   
+            ->where([
+                ['entrante',1],
+                ['visto',0]
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->first(); 
+            $cont = 1;    
+            
+   
+        // return ['mensajes' => $msjs, 'contador' => $cont];
+
+
+    event(new MessageStatusChangedEvent(['mensajes' => $msjs, 'contador' => $cont])); 
+	return 'Fired';
+});
+
 /* Route::get('/index', 'PaginaController@index'); */
 Route::get('/index2', 'PageController@index');
 Route::get('/contactanos', 'PageController@contactanos');
@@ -69,7 +93,7 @@ Route::group(['middleware' => 'auth'], function () {
     //Parametros
     Route::get('/parametros', 'ParametrosController@index');
     Route::post('/parametros/actualizar', 'ParametrosController@update');
-    // -----------------------------------------------------------------PAGINA -------------------------------------------------
+    // -----------------------------------------------------------------PAGINA ------------------------------------------------- 
     
     Route::get('/inicio', 'InicioController@index'); 
     //Carrusel
@@ -115,11 +139,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/seccion6/mostrar/{id}', 'Seccion6Controller@show'); 
     Route::get('/seccion6Det/eliminar/{id}', 'Seccion6Controller@destroy');
     Route::get('/seccion6Det/desabilitar/{id}', 'Seccion6Controller@desabilitar');
-    Route::get('/seccion6Det/habilitar/{id}', 'Seccion6Controller@habilitar');
-
-     
-
-    
+    Route::get('/seccion6Det/habilitar/{id}', 'Seccion6Controller@habilitar'); 
 
     //---------------------------NOSOTROS-------------------------
     //Misión
@@ -256,6 +276,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/inbox', 'MailController@obtenerMensajes');
     Route::get('/outbox', 'MailController@obtenerMensajesSalida');
     Route::get('/inboxhistorial', 'MailController@obtenerMensajesHistorial');
+    Route::get('/mensajesNuevos', 'MailController@obtenerMensajesNuevos'); 
     Route::get('/inbox/visto/{id}', 'MailController@visto');
     Route::get('/inbox/{id}', 'MailController@detalle');
     Route::get('/outbox/{id}', 'MailController@detalleSalida');

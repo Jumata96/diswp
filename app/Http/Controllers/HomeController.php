@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use Carbon\Carbon;
+use App\User;
+use App\Notifications\notifyAdmin;
+
+use Illuminate\Notifications\Notifiable;
+
 
 class HomeController extends Controller
 {
+     use Notifiable;
+
     /**
      * Create a new controller instance.
      *
@@ -32,6 +39,27 @@ class HomeController extends Controller
      */
     public function index()
     {
+        /* $fechaActual=date('Y-m-d');
+        $numMensajes = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')   
+            ->where([
+                ['entrante',1],
+                ['visto',0]
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->count(); 
+        $arregloDatos=[
+            'ventas'=>[
+                'numero' =>$numMensajes,
+                'msj'   =>'mensaje'
+            ],
+            'ingreso'=>[
+                'numero' =>$numMensajes,
+                'msj'   =>'mensaje 2'
+            ]
+        ];
+          new notifyAdmin( $arregloDatos);
+ */
         
         if(Auth::user()->idtipo == 'CLE'){
         //-------INICIO INDICADORES DASHBOARD CLIENTES---------

@@ -9,7 +9,7 @@
                     <li><a href="#" style="color: #00796b">Estadísticas</a></li>
                     <li><a href="#" style="color: #00796b">Accesos directos</a></li>
                   </ol>
-                </div>
+                </div> 
                
               </div>
             </div>

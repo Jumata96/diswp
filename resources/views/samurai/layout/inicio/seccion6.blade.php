@@ -60,8 +60,7 @@
                                                  <div class="s5_mason_abi_wrap">
                                                     <div class="s5_mason_abi_wrap_inner">
                                                        <h4 class="s5_masonry_articletitle ">
-                                                          <a href="index.php/masonry/37-strength/115-strength-training.html"> 
-                                                             {{$seccion_det6->titulo}}</a>
+                                                          <a href="#">{{$seccion_det6->titulo}}</a>
                                                        </h4>
                                                        <div class="s5_mason_it_wrap">
                                                           {{$seccion_det6->descripcion}}
@@ -214,23 +213,29 @@
                                              });
                                         }
                                      </script>
-                                     <script>
+                                     {{-- <script>
                                         function CatArticle(cat){
                                             document.getElementById('catid').value = cat;
                                             var limitstart = '6';
                                             document.getElementById('limitstart').value = limitstart;
-                                            var ajaxurl = 'indexbd6c.html?ajaxload=true';
-                                            jQuery('#s5_masonload_wrap').append('<div id="s5_masonload_loading"></div>');
+                                            var ajaxurl = 'indexbd6c.html?ajaxload=true'; 
+                                            jQuery( ".ajaxdiv").html(' ' ); 
+                                            jQuery( ".ajaxdiv").append('<div id="s5_masonload_loading"></div>');  
                                             jQuery('#s5_masonload_loading').html('<div id="s5_loading_inner"></div>');
-                                            jQuery.ajax({
-                                                url: ajaxurl+"&limitstart="+limitstart+"&catid="+cat+"&count="+limitstart,
-                                                success: function(data) {
-                                                    jQuery('#s5_masonload_loading').remove();
-                                                    jQuery( ".ajaxdiv").html(data );
-                                                    }
-                                             });
+
+                                            var datos= @json($inicio_seccion_det);
+                                           console.log(datos);
+                                            for(x=0;x<datos.length; x++){
+                                               console.log(datos[x].id_seccion);
+                                               if( datos[x].id_seccion=="SEC6"){  
+                                                jQuery( ".ajaxdiv").html(' <h4 class="s5_masonry_articletitle id="s5_masonry_articletitle'+x+'" ">'+'</h4>'); 
+                                                jQuery("s5_masonry_articletitle"+x).html(' <div class="s5_masonwrapinner">s4 '+'</h4>'); 
+                                                  
+                                               }
+                                            }
+ 
                                         }
-                                     </script>
+                                     </script> --}}
                                   </div>
                                   <div style="clear:both; height:0px"></div>
                                </div>

@@ -67,7 +67,7 @@
     <div class="col s12 z-depth-4 card" style=" min-width: 10rem; max-width: 45rem; margin-top: 4rem; margin-left: 10px; margin-right: 10px">
       <div class="card-header center white-text"; style="border-bottom: 1px solid red; background-color: #0091ea; height: 60px; padding-top: 8px">
            <span class="logo-text sideusuario" style="padding-left: 0px; font-size: 32px">
-            <b style="color: #fafafa; font-style: normal;">ARDINITRADING</b>
+            <b style="color: #fafafa; font-style: normal;">Diswp</b>
         </span>                        
       </div>
       <form method="POST" action="{{ route('register') }}" style="padding: 10px">

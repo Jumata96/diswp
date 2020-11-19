@@ -1003,7 +1003,7 @@ height: 720px;
 
 .class_item_img_wrap {
 overflow:hidden;
-max-height: 250px;
+max-height: 200px;
 }
 
 .class_item img {
@@ -1022,6 +1022,8 @@ padding:30px;
 padding-top:24px;
 color:#FFFFFF;
 line-height:180%;
+
+height: 360px;
 }
 
 .class_item_text h3 {
@@ -1038,6 +1040,23 @@ color:#FFFFFF;
 text-align:center;
 line-height:40px;
 margin-bottom:22px;
+}
+.class_item_button { 
+	text-align:center;
+line-height:40px;
+margin-bottom:22px;
+padding:30px;
+padding-top:24px;
+overflow:hidden;
+max-height: 300px;
+}
+.class_item_horario {  
+overflow:hidden;
+max-height: 100px;
+}
+
+.class_item_text_p {  
+height: 270px; 
 }
 
 .class_item_dollar {

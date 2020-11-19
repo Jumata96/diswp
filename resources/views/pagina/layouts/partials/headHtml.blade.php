@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="Somos una empresa que busca satisfacer con excelencia la necesidad del mercado automotriz, brindando confiabilidad en lo que respecta a repuestos y accesorios, procurando la preferencia de nuestros clientes por la calidad en el servicio y la competitividad de los precios en el mercado.">
     <meta name="keywords" content="repuestos, autopartes, repuestos autos, autos, lima repuestos, engranajes">
-    <title>ArdiniTrading - @yield('titulo','Inicio')</title>
+    <title>Diswp - @yield('titulo','Inicio')</title>
     <!-- Favicons-->
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

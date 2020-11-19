@@ -35,16 +35,14 @@
         name: 'videosn', 
         props: ['postTitle','cursoId'],
         data() {
-            return {
-                 
+            return { 
                 arrayVideo:[],
                 videoSelected: {
                     codigo: '',
                     description: ' ',
                     url_video:" ",
                     titulo:""
-                }
-                
+                } 
             }
         },
         mounted() {
@@ -54,10 +52,10 @@
         methods: {
             listarVideos() {
                 let me =this; 
-                console.log(this.postTitle,this.cursoId);  
+                /* console.log(this.postTitle,this.cursoId);   */
                 axios.get('videos'+'/'+this.cursoId) .then(function (response) { 
                     // handle success
-                     console.log(response.data);
+                     /* console.log(response.data); */
                      me.arrayVideo=response.data;
                 })
                 .catch(function (error) {

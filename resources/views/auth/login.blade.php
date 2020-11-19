@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Página de Ingreso | ArdiniTrading</title>
+  <title>Página de Ingreso | DISWP</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -57,7 +57,7 @@
     <div class="card-panel" id="pagina-login" style="width: 25rem; padding: 0">
       <div class="card-header center white-text"; style="border-bottom: 1px solid red; background-color: #3949ab; height: 60px; padding-top: 8px">
         <span class="logo-text sideusuario" style="padding-left: 0px; font-size: 32px">
-            <b style="color: #fafafa; font-style: normal;">ARDINI</b>TRADING
+            <b style="color: #fafafa; font-style: normal;">DISWP</b> 
         </span>                             
       </div>
       <form action="{{ url('/login') }}" method="post" style="padding: 10px">

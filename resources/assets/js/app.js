@@ -5,7 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap'); 
 
 window.Vue = require('vue');
 
@@ -17,14 +17,25 @@ window.Vue = require('vue');
 
 /* Vue.component('example-component', require('./components/ExampleComponent').default); */
 Vue.component('videosn', require('./components/Videos').default);  
+Vue.component('notificaciones', require('./components/notificaciones').default);  
+Vue.component('mensajes', require('./components/mensajes').default);  
 /* require('./components/ExampleComponent.vue') */
+
+
 
 const app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!'
-      }
+      } 
+    
 });
+
+
+ 
+/* compilar archivo :
+npm run dev
+ */
 
  
 

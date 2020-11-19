@@ -3,9 +3,9 @@
           <div class="brand-sidebar" style="height: 62px">
             <h1 class="logo-wrapper">
               <a href="{{url('/')}}" class="brand-logo darken-1">
-                <img id="imglogo" src="{{asset('img/logo.png')}}" alt="ardiniTrading" style="height: 26px">
+                <img id="imglogo" src="{{asset('img/logo.png')}}" alt="Diswp" style="height: 26px">
                 <span class="logo-text sideusuario" style="padding-left: 0px;">
-                  <b style="color: #fafafa; font-style: normal;">ARDINI</b>TRADING
+                  <b style="color: #fafafa; font-style: normal;">Diswp</b> 
                 </span>
               </a>
               <a href="#" class="navbar-toggler" id="radio" onclick="Materialize.fadeInImage('.sideusuario')" >

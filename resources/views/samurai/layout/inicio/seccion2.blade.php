@@ -21,35 +21,48 @@
                                                    <div class="class_item">
                                                       <a href="index.php/features-mainmenu-47/template-specific-features.html">
                                                          <div class="class_item_img_wrap">
-                                                            <img src="{{asset('/storage/'.$curso->url_imagen)}}" alt="" /> 
+                                                            <img src="{{asset('/storage/'.$curso->url_imagen)}}" alt="" width="100%" height="100%" /> 
                                                          </div>
                                                       </a>
-                                                      <div class="class_item_text">
-                                                         <h3> {{$curso->nombre}}</h3>
-                                                         <div class="class_item_price">
-                                                            <span class="class_item_dollar_sign">S/.</span>
-                                                            <span class="class_item_dollar">{{$curso->costo}}</span>
-                                                            {{-- <span class="class_item_cents">99</span> --}}
-                                                            {{-- <span class="class_item_dash">/</span> --}}
-                                                            {{-- <span class="class_item_period">Month</span> --}}
-                                                         </div>
-                                                          {{$curso->descripcion}}
-                                                         <br /><br />
-                                                         <span class="ion-ios-calendar-outline class_item_icon"></span> 
-                                                         @foreach ($horarios as $horario)
-                                                         @if ($horario->codigo == $curso->horario)
-                                                             {{$horario->dia}}
-                                                         @endif
-                                                             
-                                                         @endforeach
-                                                         <br />
-                                                         {{-- <span class="ion-android-time class_item_icon"></span> 9:00am and 3:30pm --}}
-                                                         <br />
-                                                         <a class="readon" href="#">Únete a la clase</a>
-                                                      </div>
+                                                      <div class="class_item_text"> 
+                                                         <div class="class_item_text_p"> 
+                                                            <h3> {{$curso->nombre}}</h3>
+                                                            <div class="class_item_price"> 
+                                                               <span class="class_item_dollar_sign">S/.</span>
+                                                               <span class="class_item_dollar">{{$curso->costo}}</span>
+                                                               {{-- <span class="class_item_cents">99</span> --}}
+                                                               {{-- <span class="class_item_dash">/</span> --}}
+                                                               {{-- <span class="class_item_period">Month</span> --}}
+                                                            </div>
+                                                            {{$curso->descripcion}}
+                                                            <br/>  
+                                                         </div> 
+                                                         <div class="class_item_text_p"> 
+                                                            <span class="ion-ios-calendar-outline class_item_icon"></span> 
+                                                               @foreach ($horarios as $horario)
+                                                                  @if ($horario->codigo == $curso->horario)
+                                                                     {{$horario->dia}}
+                                                                  @endif 
+                                                               @endforeach
+                                                              
+                                                         </div> 
+                                                         
+                                                         
+                                                         {{-- <br />
+                                                         <span class="ion-android-time class_item_icon"></span> 9:00am and 3:30pm
+                                                         <br /> --}}
+                                                         {{-- <div class="class_item_button"> 
+                                                            <a class="readon" href="#">Únete a la clase</a>  
+                                                         </div> --}} 
+                                                         
+                                                      </div> 
+                                                         <div style="clear:both:height:0px;"></div>
+                                                         <div class="class_item_button"> 
+                                                            <a class="readon" href="#">Únete a la clase</a>  
+                                                         </div> 
                                                       </div> 
                                                    
-                                                   <div style="clear:both:height:0px;"></div>
+                                                   
                                                    @endforeach 
                                                 </div>
                                                 <div style="clear:both:height:0px;"></div>

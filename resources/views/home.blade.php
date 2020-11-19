@@ -2,3 +2,5 @@
 @section('titulo','DashBoard')
 
 @include('forms.dashBoard.dashBoard')
+
+ 

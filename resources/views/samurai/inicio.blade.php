@@ -15,5 +15,5 @@
          @include('samurai.layout.inicio.seccion7') 
       @endforeach
    @endforeach 
-
+@include('forms.contactanos.scripts.enviarMensaje')
 @endsection

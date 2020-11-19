@@ -38,7 +38,7 @@
                               <div class="col s12">
                                 <div class="file-field input-field col s12 "> 
                                   <div class="col s8 m8 l6 offset-s2 offset-m2 offset-l3 center" style="">
-                                    <img src="{{asset('images/usu-perfil.png')}}" alt="" id="avatarImage" class="circle responsive-img valign profile-image teal lighten-5" style="height: 100%; width: 100%">
+                                    <img src="{{asset('images/user-profile-bg.jpg')}}" alt="" id="avatarImage" class=" responsive-img valign profile-image teal lighten-5" style="height: 100%; width: 100%">
                                   </div> 
                                   <div class="col s12" style="padding: 0px; padding-top:50px">
                                     <div class="btn">
@@ -138,13 +138,23 @@
                                     <input id="btn_color" name="btn_color" type="text" data-error=".errorTxt2" minlength="7" maxlength="100" value="">
                                     
                                   </div> 
-                                </div>   --}}     
+                                </div>   --}} 
                                 <div class="col s12" style="padding-bottom: 10px; padding-top: 10px"> 
                                   <div class="input-field col s12 m6 l8">                                  
-                                    <p>Ingrese el código del producto para realizar el enlace con el botón</p>
+                                    <p>Ingrese el texto para mostrar en  el botón</p>
                                   </div>                                    
                                   <div class="col s12 m6 l4">
-                                    <label for="btn_idprod">Cod. Producto</label>
+                                    <label for="btn_text">Texto</label>
+                                    <input id="btn_text" name="btn_text" type="text" data-error=".errorTxt2" minlength="7" maxlength="100"  >
+                                    
+                                  </div> 
+                                </div>     
+                                <div class="col s12" style="padding-bottom: 10px; padding-top: 10px"> 
+                                  <div class="input-field col s12 m6 l8">                                  
+                                    <p>Ingrese el código del curso para realizar el enlace con el botón</p>
+                                  </div>                                    
+                                  <div class="col s12 m6 l4">
+                                    <label for="btn_idprod">Cod. Curso</label>
                                     <input id="btn_idprod" name="btn_idprod" type="text" data-error=".errorTxt2" maxlength="11" value="">
                                     
                                   </div> 
@@ -178,6 +188,8 @@
               </div>
   </div>
 </div>
+@include('forms.inicio.carrusel.modalAddCursos')
+
 <br><br><br>
 @endsection
 
@@ -222,6 +234,18 @@
                 alert('La imagen subida no tiene un formato correcto');
             });
         });
+    });
+  </script>
+  <script> 
+    $("#btn_idprod").focus(function(){ 
+		$('#modalAddCurso').modal('open');  
+		});  
+    $('.btnSeleccionarCurso').on('click',function () {
+      	var dataId = $(this).attr("data-id");
+        console.log(dataId);
+        $('#btn_idprod').val(''); 
+        $('#btn_idprod').val(dataId.padStart(10, "0")); 
+        	$('#modalAddCurso').modal('close');  
     });
   </script>
     

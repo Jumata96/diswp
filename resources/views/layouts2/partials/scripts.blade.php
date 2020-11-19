@@ -74,10 +74,13 @@
         
 
     </script>
+     <script src="{{asset('js/appI.js')}}"></script> 
 
 
+<script>
+
+</script>
     
-    @section('script')
-
+    @section('script') 
     @show
 

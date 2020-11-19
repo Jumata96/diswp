@@ -25,9 +25,7 @@
 
                         @include('forms.scripts.modalInformacion')              
                         
-                  </div>
-                                    
-                  
+                  </div> 
                   <div class="row">
                     
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -168,13 +166,23 @@
                                     <input id="btn_color" name="btn_color" type="text" data-error=".errorTxt2" minlength="7" maxlength="100" value="{{$datos->btn_color}}">
                                     
                                   </div> 
-                                </div>  --}}      
+                                </div>  --}}    
                                 <div class="col s12" style="padding-bottom: 10px; padding-top: 10px"> 
                                   <div class="input-field col s12 m6 l8">                                  
-                                    <p>Ingrese el código del producto para realizar el enlace con el botón</p>
+                                    <p>Ingrese el texto para mostrar en  el botón</p>
                                   </div>                                    
                                   <div class="col s12 m6 l4">
-                                    <label for="btn_idprod">Cod. Producto</label>
+                                    <label for="btn_text">Texto</label>
+                                    <input id="btn_text" name="btn_text" type="text" data-error=".errorTxt2" minlength="7" maxlength="100" value="{{$datos->btn_text}}">
+                                    
+                                  </div> 
+                                </div>    
+                                <div class="col s12" style="padding-bottom: 10px; padding-top: 10px"> 
+                                  <div class="input-field col s12 m6 l8">                                  
+                                    <p>Ingrese el código del curso para realizar el enlace con el botón</p>
+                                  </div>                                    
+                                  <div class="col s12 m6 l4">
+                                    <label for="btn_idprod">Cod. Curso</label>
                                     <input id="btn_idprod" name="btn_idprod" type="text" data-error=".errorTxt2" minlength="7" maxlength="100" value="{{$datos->btn_idprod}}">
                                     
                                   </div> 
@@ -204,9 +212,22 @@
               </div>
   </div>
 </div>
+@include('forms.inicio.carrusel.modalAddCursos')
 @endforeach
 @endsection
 
 @section('script')
   @include('forms.inicio.scripts.updCarrusel')    
+  <script> 
+    $("#btn_idprod").focus(function(){ 
+		$('#modalAddCurso').modal('open');  
+		});  
+    $('.btnSeleccionarCurso').on('click',function () {
+      	var dataId = $(this).attr("data-id");
+        console.log(dataId);
+        $('#btn_idprod').val(''); 
+        $('#btn_idprod').val(dataId.padStart(10, "0")); 
+        	$('#modalAddCurso').modal('close');  
+    });
+  </script>
 @endsection

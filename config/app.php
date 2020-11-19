@@ -156,7 +156,7 @@ return [
          */
         InnovaTec\Providers\AppServiceProvider::class,
         InnovaTec\Providers\AuthServiceProvider::class,
-        // InnovaTec\Providers\BroadcastServiceProvider::class,
+        InnovaTec\Providers\BroadcastServiceProvider::class,
         InnovaTec\Providers\EventServiceProvider::class,
         InnovaTec\Providers\RouteServiceProvider::class,
 

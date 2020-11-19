@@ -18,24 +18,25 @@ class MailController extends Controller
 
     public function obtenerMensajes()
     {  
-            /* $msjs = DB::table('msj_compra as msj')
-            ->select('msj.id','msj.fecha','msj.visto','c.idcarrito', 'cle.nombre','cle.apellidos')
-            ->join('carrito as c','c.idcarrito','=','msj.idcarrito') 
-            ->join('users as cle','cle.id','=','c.idcliente')       
-            ->orderBy('msj.fecha', 'desc')        
-            ->get();
-           
-            $cont = DB::table('msj_compra as msj')
-            ->select('msj.fecha','msj.visto','c.idcarrito', 'cle.nombre')
-            ->join('carrito as c','c.idcarrito','=','msj.idcarrito') 
-            ->join('users as cle','cle.id','=','c.idcliente')
-            ->where('visto','0')         
-            ->count();    */ 
-         /* $msjs = DB::table('mensaje as msj')->orderBy('msj.fecha', 'desc')->where('visto','0') ->get();  */   
-          /*   $cont = DB::table('mensaje as msj')->orderBy('msj.fecha', 'desc')->where('visto','0') ->count ();*/
+        
 
            $msjs = DB::table('mensaje')
-            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')   
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')   
+            ->where([
+                ['entrante',1]/* ,
+                ['visto',0] */
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->get();
+            $cont = $msjs->count();    
+        return ['mensajes' => $msjs, 'contador' => $cont];
+    }
+    public function obtenerMensajesNuevos()
+    {  
+        
+
+           $msjs = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')   
             ->where([
                 ['entrante',1],
                 ['visto',0]
@@ -49,7 +50,7 @@ class MailController extends Controller
     public function obtenerMensajesSalida()
     {  
             $msjs = DB::table('mensaje')
-            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')  
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')  
             ->where('saliente',1)      
             ->orderBy('fecha', 'desc')        
             ->get();
@@ -62,7 +63,7 @@ class MailController extends Controller
     {  
             
            $msjs = DB::table('mensaje')
-            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha')   
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')   
             ->where([
                 ['entrante',1],
                 ['visto',1]

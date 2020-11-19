@@ -42,7 +42,7 @@ class InicioController extends Controller
         $inicio_seccion_det1 = DB::table('inicio_seccion_det')->whereIn('estado',[1,0])->where('id_seccion','SEC1')->get();
         $inicio_seccion_det4 = DB::table('inicio_seccion_det')->whereIn('estado',[1,0])->where('id_seccion','SEC4')->get();
         $inicio_seccion_det6= DB::table('inicio_seccion_det')->whereIn('estado',[1,0])->where('id_seccion','SEC6')->get();
-
+// dd('cimcodomm');
         // dd($dgeneral);
 
         //seccion3 

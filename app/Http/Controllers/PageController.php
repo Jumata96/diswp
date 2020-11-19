@@ -4,6 +4,7 @@ namespace InnovaTec\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection as Collection;
+use InnovaTec\Events\MessageStatusChangedEvent; 
 use DB;
 use Auth;
 use Validator;
@@ -64,6 +65,22 @@ class PageController extends Controller
                     'entrante'       =>1,
                     'fecha'          => date('Y-m-d H:m:s')
         ]);  
+
+         
+        $msjs = DB::table('mensaje')
+            ->select('id','enviado_por','email_destino','asunto','mensaje', 'fecha','visto')   
+            ->where([
+                ['entrante',1],
+                ['visto',0]
+            ])       
+            ->orderBy('fecha', 'desc')        
+            ->first(); 
+            $cont = 1;                
+    
+        // return ['mensajes' => $msjs, 'contador' => $cont];
+
+
+     event(new MessageStatusChangedEvent(['mensajes' => $msjs, 'contador' => $cont]));
        
     }
 }

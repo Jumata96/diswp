@@ -15,12 +15,16 @@ class CarruselController extends Controller
 
     public function create()
     {
-       return view('forms.inicio.carrusel.addCarrusel');
+        $cursos = DB::table('cursos')->where('estado',1)->get();
+         
+       return view('forms.inicio.carrusel.addCarrusel',[
+         'cursos'      => $cursos
+       ]);
     }
 
     public function store(Request $request)
     {
-    	// dd($request);
+    	//  dd($request);
     	$idusu = Auth::user()->id;
         $validacion = DB::table('validacion')->where('idusuario',$idusu)->get();
     	$principal = 0;
@@ -52,6 +56,7 @@ class CarruselController extends Controller
             'btn_estado'        => strval($request->btn_estado),
             'btn_color'         => $request->btn_color,
             'btn_idprod'        => str_pad($request->btn_idprod, 10, "0", STR_PAD_LEFT),
+            'btn_text'          =>$request->btn_text,
             'fecha_creacion'    => date('Y-m-d h:m:s')
         ]);
 
@@ -113,6 +118,7 @@ class CarruselController extends Controller
                 'color'             => (empty($request->color))? 'grey-text text-lighten-3' : $request->color,
                 'btn_estado'        => strval($request->btn_estado),
                 'btn_color'         => $request->btn_color,
+                'btn_text'          =>$request->btn_text,
                 'btn_idprod'        => str_pad($request->btn_idprod, 10, "0", STR_PAD_LEFT),
                 
 	        ]);
@@ -156,10 +162,15 @@ class CarruselController extends Controller
 
     public function show($id)
     {
+          $cursos = DB::table('cursos')->where('estado',1)->get(); 
+        //   dd( $cursos);
         $carrusel = DB::table('carrusel')
                     ->where('id',$id)->get();
 
-        return view('forms.inicio.carrusel.updCarrusel',['carrusel' => $carrusel]);
+        return view('forms.inicio.carrusel.updCarrusel',[
+            'cursos'            => $cursos,
+            'carrusel'          => $carrusel
+            ]);
     }
 
     public function disabled($id)
